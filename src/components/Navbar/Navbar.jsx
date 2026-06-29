@@ -126,7 +126,7 @@ const Navbar = () => {
                 )}
               </ActionIcon>
 
-              <Burger opened={opened} onClick={toggle} size="sm" />
+              <Burger opened={opened} onClick={toggle} size="sm"  />
             </Group>
           </Group>
         </Container>
