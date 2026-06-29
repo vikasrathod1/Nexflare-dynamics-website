@@ -112,12 +112,22 @@ const Navbar = () => {
 
             {/* Mobile Burger */}
 
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              hiddenFrom="md"
-              size="sm"
-            />
+            <Group hiddenFrom="md" gap="xs">
+              <ActionIcon
+                variant="subtle"
+                radius="xl"
+                size="lg"
+                onClick={toggleTheme}
+              >
+                {computedColorScheme === "dark" ? (
+                  <IconSun size={20} />
+                ) : (
+                  <IconMoon size={20} />
+                )}
+              </ActionIcon>
+
+              <Burger opened={opened} onClick={toggle} size="sm" />
+            </Group>
           </Group>
         </Container>
       </header>
