@@ -1,0 +1,278 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap");
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+  transition: all 0.35s ease;
+}
+
+.navbar-scrolled {
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 100px;
+  /* width: 70%; */
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.navbar-scrolled .logo {
+  height: 52px;
+}
+
+/* ===========================
+   DESKTOP LINKS
+=========================== */
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Light Theme */
+.navbar.light .nav-link {
+  color: #000000;
+}
+
+/* Dark Theme */
+.navbar.dark .nav-link {
+  color: #ffffff;
+}
+
+/* Hover */
+.nav-link:hover {
+  color: #00E5FF !important;
+}
+
+.nav-active {
+  color: #00E5FF !important;
+}
+
+.nav-link::after {
+  background: #00E5FF;
+}
+
+
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  /* background: #0d6efd; */
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-active::after {
+  width: 100%;
+}
+
+/* ===========================
+   DROPDOWN
+=========================== */
+
+.mantine-Menu-dropdown {
+  border-radius: 12px !important;
+  padding: 8px;
+  border: none !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+.mantine-Menu-item {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.mantine-Menu-item:hover {
+  background: #E0FCFF !important;
+  color: #00BCD4 !important;
+}
+
+.dropdown-active {
+  background: #E0FCFF !important;
+  color: #00BCD4 !important;
+}
+
+/* ===========================
+   CTA BUTTON
+=========================== */
+
+.quote-btn {
+  background: linear-gradient(
+    135deg,
+    #00E5FF,
+    #00BCD4
+  ) !important;
+
+  color: #081120 !important;
+  font-weight: 700;
+}
+
+.quote-btn:hover {
+  box-shadow: 0 10px 22px rgba(0, 229, 255, 0.4);
+}
+
+/* ===========================
+   MOBILE LINKS
+=========================== */
+
+.mobile-link {
+  display: block;
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  /* font-weight: 600; */
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: all 0.25s;
+}
+
+.mobile-link:hover {
+  background: #E0FCFF;
+  color: #00BCD4;
+}
+
+.mobile-active {
+  background: #00BCD4;
+  color: white !important;
+}
+
+/* ===========================
+   DRAWER
+=========================== */
+
+.mantine-Drawer-header {
+  border-bottom: 1px solid #eee;
+}
+
+.mantine-Drawer-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.mantine-Accordion-control {
+  font-weight: 600;
+}
+
+.mantine-Accordion-control:hover {
+  background: #E0FCFF;
+}
+
+/* ===========================
+   BURGER
+=========================== */
+
+.mantine-Burger-root {
+  color: white;
+}
+
+.navbar-scrolled .mantine-Burger-root {
+  color: #222;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1200px) {
+  .logo {
+    height: 52px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    height: 72px;
+  }
+
+  .logo {
+    height: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .logo {
+    height: 44px;
+  }
+
+  .mobile-link {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    height: 40px;
+  }
+
+  .quote-btn {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   SMOOTH TRANSITIONS
+=========================== */
+
+* {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.navbar.light {
+  background: #ffffff;
+}
+
+.navbar.dark {
+  background: #081120;
+}
+
+.navbar-scrolled.light {
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.12);
+}
+
+.navbar-scrolled.dark {
+  background: #081120;
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+}
+
