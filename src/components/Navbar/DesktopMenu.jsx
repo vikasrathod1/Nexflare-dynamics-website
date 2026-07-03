@@ -77,7 +77,6 @@
 
 // export default DesktopMenu;
 
-
 import { Group, Menu } from "@mantine/core";
 import { Link, useLocation } from "react-router-dom";
 import { IconChevronDown, IconChevronRight } from "@tabler/icons-react";
@@ -102,7 +101,8 @@ const DesktopMenu = () => {
               withinPortal
             >
               <Menu.Target>
-                <div
+                <Link
+                  to={item.path}
                   className={`nav-link ${
                     location.pathname.startsWith(item.path) ? "nav-active" : ""
                   }`}
@@ -110,12 +110,12 @@ const DesktopMenu = () => {
                     display: "flex",
                     alignItems: "center",
                     gap: 5,
-                    cursor: "pointer",
+                    textDecoration: "none",
                   }}
                 >
                   {item.label}
                   <IconChevronDown size={16} />
-                </div>
+                </Link>
               </Menu.Target>
 
               <Menu.Dropdown>
@@ -123,18 +123,9 @@ const DesktopMenu = () => {
                   // Child HAS subchildren → nested Menu
                   if (child.children) {
                     return (
-                      <Menu
-                        key={child.label}
-                        trigger="hover"
-                        openDelay={100}
-                        closeDelay={150}
-                        shadow="md"
-                        width={230}
-                        position="right-start"
-                        withinPortal
-                      >
-                        <Menu.Target>
-                          <Menu.Item
+                      <Menu.Sub key={child.label}>
+                        <Menu.Sub.Target>
+                          <Menu.Sub.Item
                             rightSection={<IconChevronRight size={14} />}
                             className={
                               location.pathname.startsWith(child.path)
@@ -143,22 +134,24 @@ const DesktopMenu = () => {
                             }
                           >
                             {child.label}
-                          </Menu.Item>
-                        </Menu.Target>
+                          </Menu.Sub.Item>
+                        </Menu.Sub.Target>
 
-                        <Menu.Dropdown>
+                        <Menu.Sub.Dropdown>
                           {child.children.map((sub) => (
                             <Menu.Item
                               key={sub.label}
                               component={Link}
                               to={sub.path}
-                              className={isActive(sub.path) ? "dropdown-active" : ""}
+                              className={
+                                isActive(sub.path) ? "dropdown-active" : ""
+                              }
                             >
                               {sub.label}
                             </Menu.Item>
                           ))}
-                        </Menu.Dropdown>
-                      </Menu>
+                        </Menu.Sub.Dropdown>
+                      </Menu.Sub>
                     );
                   }
 

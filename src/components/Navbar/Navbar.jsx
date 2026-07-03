@@ -21,6 +21,7 @@ import { IconMoon, IconSun } from "@tabler/icons-react";
 
 import "./Navbar.css";
 
+
 import logoLight from "../../assets/images/logoLight.png";
 import logoDark from "../../assets/images/logoDark.png";
 

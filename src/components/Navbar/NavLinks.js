@@ -157,7 +157,7 @@ const navLinks = [
           },
           {
             label: "Analytics & Reporting",
-            path: "/services/digital-marketing/service/analytics",
+            path: "/services/digital-marketing/analytics-reporting",
           },
         ],
       },
