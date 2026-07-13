@@ -82,7 +82,7 @@ const LatestArticles = () => {
   const visibleBlogs = showAll ? blogs : blogs.slice(0, 3);
 
   return (
-    <Container size="xl" py={100}>
+    <Container size="xl" pb={60}>
       <Stack align="center" mb={60}>
         <Badge
           radius="xl"
@@ -185,7 +185,7 @@ const LatestArticles = () => {
                   </Group>
                 </Group>
 
-                <Button
+                {/* <Button
                   variant="light"
                   radius="xl"
                   color="cyan"
@@ -194,7 +194,7 @@ const LatestArticles = () => {
                   }
                 >
                   Read More
-                </Button>
+                </Button> */}
               </Box>
             </MotionCard>
           </motion.div>

@@ -10,6 +10,7 @@ import {
   useComputedColorScheme,
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 const contactInfo = [
   { label: "Phone", value: "+91-8237525097" },
@@ -18,6 +19,7 @@ const contactInfo = [
 ];
 
 const LetsBuildTogether = () => {
+  const navigate = useNavigate();
   // Parent component controls the page background; this component only
   // reads the computed color scheme to adapt text / button / border colors.
   const computedColorScheme = useComputedColorScheme("light");
@@ -116,23 +118,38 @@ const LetsBuildTogether = () => {
                   "&:hover": { background: primaryBtnBg, opacity: 0.9 },
                 },
               }}
+               onClick={() => navigate("/contact")}
             >
               Schedule a Call
             </Button>
-            <Button
-              size="md"
-              radius={4}
-              variant="outline"
-              styles={{
-                root: {
-                  borderColor: accent,
-                  color: accent,
+             <Box
+                component="button"
+                type="button"
+                onClick={() =>
+                  window.open(
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=enquiry@nexflaredynamics.com&su=Project%20Inquiry&body=Hello%20Nexflare%20Dynamics,%0A%0AI%20would%20like%20to%20discuss%20my%20project.%0A%0ARegards,",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "12px 26px",
+                  borderRadius: "999px",
+                  border: `1px solid ${
+                    isDark ? "rgba(255,255,255,0.25)" : "rgba(15,23,42,0.25)"
+                  }`,
+                  color: headingColor,
                   fontWeight: 600,
-                },
-              }}
-            >
-              Email Us
-            </Button>
+                  fontSize: 14,
+                  background: "transparent",
+                  cursor: "pointer",
+                }}
+              >
+                Email Us
+              </Box>
           </Group>
 
           <Divider w="100%" color={dividerColor} mb={32} />

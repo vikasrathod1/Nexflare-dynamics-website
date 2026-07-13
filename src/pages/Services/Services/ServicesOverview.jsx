@@ -196,7 +196,7 @@ const MotionCard = motion.create(Card);
 
 const services = [
   {
-    number: "01",
+    // number: "01",
     title: "Dev Ops",
     description:
       "CI/CD pipelines, infrastructure as code, automated monitoring. Seamless deployments with enterprise-grade reliability.",
@@ -204,7 +204,7 @@ const services = [
     color: "#2563eb",
   },
   {
-    number: "02",
+    // number: "02",
     title: "Software Outsourcing",  
     description:
       "End-to-end development using a global talent pool. High quality, cost-effective, and fully managed from discovery to launch.",
@@ -212,7 +212,7 @@ const services = [
     color: "#06b6d4",
   },
   {
-    number: "03",
+    // number: "03",
     title: "Project & Resource Consulting",
     description:
       "Expert guidance, team augmentation, and strategic technology advisory for optimal project outcomes at every scale.",
@@ -220,7 +220,7 @@ const services = [
     color: "#8b5cf6",
   },
   {
-    number: "04",
+    // number: "04",
     title: "Custom Software Development",
     description:
       "Tailored web, mobile, and enterprise products built with agile methodology — aligned perfectly to your unique business goals.",

@@ -21,6 +21,7 @@ import {
   IconArrowRight,
   IconPointFilled,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 /* ── static data ───────────────────────────────────── */
 const features = [
@@ -39,6 +40,8 @@ const bullets = [
 
 /* ── component ─────────────────────────────────────── */
 const CRMSoftwareScreen = () => {
+
+  const navigate = useNavigate();
   const isDark = useComputedColorScheme("light") === "dark";
 
   /* ── same semantic token pattern ── */
@@ -85,7 +88,7 @@ const CRMSoftwareScreen = () => {
             <Stack gap={20}>
 
               <Text fz={11} fw={700} style={{ color:accent, letterSpacing:2.5, textTransform:"uppercase" }}>
-                03 — CRM Software
+                CRM Software
               </Text>
 
               <Text fz={12} fw={600} style={{ color:textDim, letterSpacing:1.5, textTransform:"uppercase" }}>
@@ -178,16 +181,17 @@ const CRMSoftwareScreen = () => {
                   rightSection={<IconArrowRight size={16}/>}
                   style={{ background:accent, color:btnPrimCol, fontWeight:700, border:"none" }}
                   className="crm-btn"
+                   onClick={()=> navigate("/contact")}
                 >
                   Request a Demo
                 </Button>
-                <Button
+                {/* <Button
                   size="md" radius="xl" variant="outline"
                   style={{ borderColor:btnOutline, color:btnTextOut }}
                   className="crm-btn"
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </Group>
 
             </Stack>

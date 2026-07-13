@@ -1042,9 +1042,9 @@ const GetInTouchScreen = () => {
                 color: headingColor,
               }}
             >
-              Let's Build <span style={{ color: aqua }}>Your</span>
+              Let's Build <span style={{ color: teal }}>Your</span>
               <br />
-              <span style={{ color: aqua }}>Vision</span> Together
+              <span style={{ color: teal }}>Vision</span> Together
             </Title>
 
             <Text mt={22} size="md" maw={440} style={{ color: bodyColor, lineHeight: 1.75 }}>

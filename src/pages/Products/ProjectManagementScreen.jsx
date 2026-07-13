@@ -21,6 +21,7 @@ import {
   IconArrowRight,
   IconPointFilled,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   { icon: IconChartBar,            title: "Gantt Charts & Timelines",    desc: "Visualize project progress and identify delays before they happen" },
@@ -37,6 +38,8 @@ const bullets = [
 ];
 
 const ProjectManagementScreen = () => {
+
+  const navigate = useNavigate();
   const isDark = useComputedColorScheme("light") === "dark";
 
   const accent      = isDark ? "#00D4C8"                    : "#0891B2";
@@ -203,7 +206,7 @@ const ProjectManagementScreen = () => {
             <Stack gap={20}>
 
               <Text fz={11} fw={700} style={{ color:accent, letterSpacing:2.5, textTransform:"uppercase" }}>
-                04 — Project Management
+                Project Management
               </Text>
 
               <Text fz={12} fw={600} style={{ color:textDim, letterSpacing:1.5, textTransform:"uppercase" }}>
@@ -283,16 +286,17 @@ const ProjectManagementScreen = () => {
                   rightSection={<IconArrowRight size={16}/>}
                   style={{ background:accent, color:btnPrimCol, fontWeight:700, border:"none" }}
                   className="pm-btn"
+                   onClick={()=> navigate("/contact")}
                 >
                   Start Free Trial
                 </Button>
-                <Button
+                {/* <Button
                   size="md" radius="xl" variant="outline"
                   style={{ borderColor:btnOutline, color:btnTextOut }}
                   className="pm-btn"
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </Group>
 
             </Stack>

@@ -21,6 +21,7 @@ import {
   IconArrowRight,
   IconPointFilled,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 /* ── static data (no colors here) ─────────────────── */
 const features = [
@@ -39,6 +40,8 @@ const bullets = [
 
 /* ── component ─────────────────────────────────────── */
 const HRMSoftwareScreen = () => {
+
+  const navigate = useNavigate();
   const isDark = useComputedColorScheme("light") === "dark";
 
   /* ── semantic token system derived from isDark ── */
@@ -90,7 +93,7 @@ const HRMSoftwareScreen = () => {
 
               {/* eyebrow */}
               <Text fz={11} fw={700} style={{ color:accent, letterSpacing:2.5, textTransform:"uppercase" }}>
-                01 — HRM Software
+                HRM Software
               </Text>
 
               {/* product label */}
@@ -187,10 +190,11 @@ const HRMSoftwareScreen = () => {
                   rightSection={<IconArrowRight size={16}/>}
                   style={{ background:btnPrimBg, color:btnPrimCol, fontWeight:700, border:"none" }}
                   className="hrm-btn"
+                  onClick={()=> navigate("/contact")}
                 >
                   Get Free Consultation
                 </Button>
-                <Button
+                {/* <Button
                   size="md"
                   radius="xl"
                   variant="outline"
@@ -198,7 +202,7 @@ const HRMSoftwareScreen = () => {
                   className="hrm-btn"
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </Group>
 
             </Stack>

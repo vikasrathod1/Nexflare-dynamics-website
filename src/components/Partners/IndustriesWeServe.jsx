@@ -95,8 +95,7 @@ const industries = [
 ];
 
 const IndustriesWeServe = () => {
-  const isDark =
-    useComputedColorScheme("light") === "dark";
+  const isDark = useComputedColorScheme("light") === "dark";
 
   return (
     <Box
@@ -150,10 +149,7 @@ const IndustriesWeServe = () => {
       >
         {/* Heading */}
 
-        <Stack
-          align="center"
-          mb={70}
-        >
+        <Stack align="center" mb={70}>
           <Badge
             radius="xl"
             size="lg"
@@ -170,24 +166,18 @@ const IndustriesWeServe = () => {
             ta="center"
             style={{
               fontWeight: 900,
-              fontSize:
-                "clamp(2rem,5vw,3.8rem)",
-              color: isDark
-                ? "#ffffff"
-                : "#111827",
+              fontSize: "clamp(2rem,5vw,3.8rem)",
+              color: isDark ? "#ffffff" : "#111827",
             }}
           >
             Industry-Specific
             <br />
-
             <span
               style={{
-                background:
-                  "linear-gradient(90deg,#2563EB,#38BDF8)",
+                background: "linear-gradient(90deg,#2563EB,#38BDF8)",
 
                 WebkitBackgroundClip: "text",
-                WebkitTextFillColor:
-                  "transparent",
+                WebkitTextFillColor: "transparent",
               }}
             >
               Digital Solutions
@@ -203,159 +193,149 @@ const IndustriesWeServe = () => {
               lineHeight: 1.9,
             }}
           >
-            We empower businesses across diverse industries
-            with secure, scalable and innovative software
-            solutions tailored to their unique operational
-            requirements and future growth.
+            We empower businesses across diverse industries with secure,
+            scalable and innovative software solutions tailored to their unique
+            operational requirements and future growth.
           </Text>
         </Stack>
 
-       <Grid
-  gutter={{
-    base: 20,
-    sm: 25,
-    md: 30,
-    lg: 35,
-  }}
->
-  {industries.map((industry, index) => {
-    const Icon = industry.icon;
-
-    return (
-      <Grid.Col
-        key={industry.title}
-        span={{
-          base: 12,
-          sm: 6,
-          lg: 3,
-        }}
-      >
-        <MotionPaper
-          className="industry-card"
-          radius="xl"
-          p={{
-            base: 22,
+        <Grid
+          gutter={{
+            base: 20,
             sm: 25,
             md: 30,
-          }}
-          h="100%"
-          initial={{
-            opacity: 0,
-            y: 50,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{ once: true }}
-          transition={{
-            duration: .6,
-            delay: index * .08,
-          }}
-          whileHover={{
-            y: -10,
-            scale: 1.02,
-          }}
-          style={{
-            position: "relative",
-            overflow: "hidden",
-
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-
-            background: isDark
-              ? "rgba(255,255,255,.05)"
-              : "#ffffff",
-
-            border: isDark
-              ? "1px solid rgba(255,255,255,.08)"
-              : "1px solid rgba(37,99,235,.08)",
-
-            backdropFilter: "blur(18px)",
-
-            boxShadow: isDark
-              ? "0 20px 45px rgba(0,0,0,.28)"
-              : "0 20px 45px rgba(37,99,235,.08)",
-
-            transition: ".35s",
+            lg: 35,
           }}
         >
-          {/* Hover Glow */}
+          {industries.map((industry, index) => {
+            const Icon = industry.icon;
 
-          <Box
-            className="industry-glow"
-            style={{
-              position: "absolute",
-              inset: 0,
-              opacity: 0,
-              transition: ".35s",
-
-              background: `radial-gradient(circle at top right, ${industry.color}30, transparent 70%)`,
-            }}
-          />
-
-          <Stack
-            justify="space-between"
-            h="100%"
-          >
-            <Stack gap={18}>
-              <ThemeIcon
-                size={70}
-                radius="xl"
-                variant="light"
-                color={industry.color}
-              >
-                <Icon size={34} />
-              </ThemeIcon>
-
-              <Title
-                order={3}
-                style={{
-                  color: isDark
-                    ? "#fff"
-                    : "#111827",
-
-                  fontWeight: 800,
+            return (
+              <Grid.Col
+                key={industry.title}
+                span={{
+                  base: 12,
+                  sm: 6,
+                  lg: 3,
                 }}
               >
-                {industry.title}
-              </Title>
+                <MotionPaper
+                  className="industry-card"
+                  radius="xl"
+                  p={{
+                    base: 22,
+                    sm: 25,
+                    md: 30,
+                  }}
+                  h="100%"
+                  initial={{
+                    opacity: 0,
+                    y: 50,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.08,
+                  }}
+                  whileHover={{
+                    y: -10,
+                    scale: 1.02,
+                  }}
+                  style={{
+                    position: "relative",
+                    overflow: "hidden",
 
-              <Text
-                c="dimmed"
-                style={{
-                  lineHeight: 1.8,
-                  minHeight: 120,
-                }}
-              >
-                {industry.description}
-              </Text>
-            </Stack>
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
 
-            <Button
-              mt={28}
-              variant="subtle"
-              color={industry.color}
-              rightSection={
-                <IconArrowRight size={18} />
-              }
-              styles={{
-                root: {
-                  justifyContent: "flex-start",
-                  paddingLeft: 0,
-                  fontWeight: 700,
-                },
-              }}
-            >
-              Learn More
-            </Button>
-          </Stack>
-        </MotionPaper>
-      </Grid.Col>
-    );
-  })}
-</Grid>
+                    background: isDark ? "rgba(255,255,255,.05)" : "#ffffff",
+
+                    border: isDark
+                      ? "1px solid rgba(255,255,255,.08)"
+                      : "1px solid rgba(37,99,235,.08)",
+
+                    backdropFilter: "blur(18px)",
+
+                    boxShadow: isDark
+                      ? "0 20px 45px rgba(0,0,0,.28)"
+                      : "0 20px 45px rgba(37,99,235,.08)",
+
+                    transition: ".35s",
+                  }}
+                >
+                  {/* Hover Glow */}
+
+                  <Box
+                    className="industry-glow"
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      opacity: 0,
+                      transition: ".35s",
+
+                      background: `radial-gradient(circle at top right, ${industry.color}30, transparent 70%)`,
+                    }}
+                  />
+
+                  <Stack justify="space-between" h="100%">
+                    <Stack gap={18}>
+                      <ThemeIcon
+                        size={70}
+                        radius="xl"
+                        variant="light"
+                        color={industry.color}
+                      >
+                        <Icon size={34} />
+                      </ThemeIcon>
+
+                      <Title
+                        order={3}
+                        style={{
+                          color: isDark ? "#fff" : "#111827",
+
+                          fontWeight: 800,
+                        }}
+                      >
+                        {industry.title}
+                      </Title>
+
+                      <Text
+                        c="dimmed"
+                        style={{
+                          lineHeight: 1.8,
+                          minHeight: 120,
+                        }}
+                      >
+                        {industry.description}
+                      </Text>
+                    </Stack>
+
+                    {/* <Button
+                      mt={28}
+                      variant="subtle"
+                      color={industry.color}
+                      rightSection={<IconArrowRight size={18} />}
+                      styles={{
+                        root: {
+                          justifyContent: "flex-start",
+                          paddingLeft: 0,
+                          fontWeight: 700,
+                        },
+                      }}
+                    >
+                      Learn More
+                    </Button> */}
+                  </Stack>
+                </MotionPaper>
+              </Grid.Col>
+            );
+          })}
+        </Grid>
         {/* Bottom Statistics */}
 
         <motion.div
@@ -369,8 +349,8 @@ const IndustriesWeServe = () => {
           }}
           viewport={{ once: true }}
           transition={{
-            duration: .8,
-            delay: .2,
+            duration: 0.8,
+            delay: 0.2,
           }}
         >
           <Grid
@@ -410,9 +390,7 @@ const IndustriesWeServe = () => {
                   p={30}
                   ta="center"
                   style={{
-                    background: isDark
-                      ? "rgba(255,255,255,.04)"
-                      : "#fff",
+                    background: isDark ? "rgba(255,255,255,.04)" : "#fff",
 
                     border: isDark
                       ? "1px solid rgba(255,255,255,.08)"
@@ -423,18 +401,11 @@ const IndustriesWeServe = () => {
                       : "0 20px 40px rgba(37,99,235,.08)",
                   }}
                 >
-                  <Title
-                    order={2}
-                    c="blue"
-                    fw={900}
-                  >
+                  <Title order={2} c="blue" fw={900}>
                     {item.number}
                   </Title>
 
-                  <Text
-                    mt={8}
-                    c="dimmed"
-                  >
+                  <Text mt={8} c="dimmed">
                     {item.label}
                   </Text>
                 </Paper>
@@ -587,7 +558,6 @@ const IndustriesWeServe = () => {
             </Grid>
           </Paper>
         </motion.div> */}
-
       </Container>
 
       <style>{`
@@ -641,7 +611,6 @@ const IndustriesWeServe = () => {
         }
 
       `}</style>
-
     </Box>
   );
 };

@@ -21,6 +21,7 @@ import {
   IconArrowRight,
   IconPointFilled,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 /* ── static data ───────────────────────────────────── */
 const features = [
@@ -39,6 +40,7 @@ const bullets = [
 
 /* ── component ─────────────────────────────────────── */
 const ERPSoftwareScreen = () => {
+  const navigate = useNavigate();
   const isDark = useComputedColorScheme("light") === "dark";
 
   /* ── semantic tokens (same pattern as HRMSoftwareScreen) ── */
@@ -213,7 +215,7 @@ const ERPSoftwareScreen = () => {
 
               {/* eyebrow */}
               <Text fz={11} fw={700} style={{ color:accent, letterSpacing:2.5, textTransform:"uppercase" }}>
-                02 — ERP Software
+                ERP Software
               </Text>
 
               {/* product label */}
@@ -310,10 +312,11 @@ const ERPSoftwareScreen = () => {
                   rightSection={<IconArrowRight size={16}/>}
                   style={{ background:accent, color:btnPrimCol, fontWeight:700, border:"none" }}
                   className="erp-btn"
+                  onClick={()=> navigate("/contact")}
                 >
                   Get Free Consultation
                 </Button>
-                <Button
+                {/* <Button
                   size="md"
                   radius="xl"
                   variant="outline"
@@ -321,7 +324,7 @@ const ERPSoftwareScreen = () => {
                   className="erp-btn"
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </Group>
 
             </Stack>

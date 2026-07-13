@@ -137,7 +137,7 @@ const ComparisonScreen = () => {
           <Text
             fz={11}
             fw={700}
-            style={{ color: orange, letterSpacing: 2.5, textTransform: "uppercase" }}
+            style={{ color: accent, letterSpacing: 2.5, textTransform: "uppercase" }}
           >
             Why NEX ERP
           </Text>

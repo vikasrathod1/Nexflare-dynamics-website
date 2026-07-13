@@ -5,7 +5,7 @@ const accent = "aqua";
 
 const products = [
   {
-    number: "01",
+    // number: "01",
     tag: "NEX HRM",
     title: "HRM Software",
     description:
@@ -15,7 +15,7 @@ const products = [
     href: "#hrm",
   },
   {
-    number: "02",
+    // number: "02",
     tag: "NEX ERP",
     title: "ERP Software",
     description:
@@ -25,7 +25,7 @@ const products = [
     href: "#erp",
   },
   {
-    number: "03",
+    // number: "03",
     tag: "NEX CRM",
     title: "CRM Software",
     description:
@@ -35,7 +35,7 @@ const products = [
     href: "#crm",
   },
   {
-    number: "04",
+    // number: "04",
     tag: "NEX PM",
     title: "Project Manager",
     description:
@@ -45,7 +45,7 @@ const products = [
     href: "#pm",
   },
   {
-    number: "05",
+    // number: "05",
     tag: "Mobile Apps",
     title: "Android & iOS Apps",
     description:
@@ -55,7 +55,7 @@ const products = [
     href: "#app",
   },
   {
-    number: "06",
+    // number: "06",
     tag: "Booking",
     title: "Appointment Booking",
     description:
@@ -65,7 +65,7 @@ const products = [
     href: "#booking",
   },
   {
-    number: "07",
+    // number: "07",
     tag: "Finance",
     title: "Accounting & Finance",
     description:
@@ -161,7 +161,7 @@ const NexflareSuiteScreen = () => {
                     textTransform: "uppercase",
                   }}
                 >
-                  {number} — {tag}
+                {tag}
                 </Text>
 
                 <Text
@@ -190,7 +190,7 @@ const NexflareSuiteScreen = () => {
                     fontWeight: 600,
                   }}
                 >
-                  Explore <ArrowRight size={15} />
+                  {/* Explore <ArrowRight size={15} /> */}
                 </Box>
               </Box>
             </Box>

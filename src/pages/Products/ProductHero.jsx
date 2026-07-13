@@ -24,6 +24,7 @@ import {
 } from "@tabler/icons-react";
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const products = [
   {
@@ -54,6 +55,7 @@ const features = [
 ];
 
 const ProductHero = () => {
+  const navigate = useNavigate();
   const colorScheme = useComputedColorScheme("light");
   const isDark = colorScheme === "dark";
 
@@ -172,6 +174,7 @@ const ProductHero = () => {
                         fontWeight: 600,
                       },
                     }}
+                    onClick={() => navigate("/contact")}
                   >
                     Request Demo
                   </Button>

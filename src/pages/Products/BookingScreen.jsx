@@ -21,6 +21,7 @@ import {
   IconArrowRight,
   IconPointFilled,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   { icon: IconCalendarTime,  title: "Real-Time Booking",              desc: "Clients book anytime, anywhere with live availability updates" },
@@ -37,6 +38,7 @@ const bullets = [
 ];
 
 const BookingScreen = () => {
+  const navigate = useNavigate();
   const isDark = useComputedColorScheme("light") === "dark";
 
   const accent      = isDark ? "#00D4C8"                    : "#0891B2";
@@ -213,7 +215,7 @@ const BookingScreen = () => {
             <Stack gap={20}>
 
               <Text fz={11} fw={700} style={{ color:accent, letterSpacing:2.5, textTransform:"uppercase" }}>
-                06 — Booking Software
+                Booking Software
               </Text>
 
               <Text fz={12} fw={600} style={{ color:textDim, letterSpacing:1.5, textTransform:"uppercase" }}>
@@ -291,16 +293,17 @@ const BookingScreen = () => {
                   rightSection={<IconArrowRight size={16}/>}
                   style={{ background:accent, color:btnPrimCol, fontWeight:700, border:"none" }}
                   className="bk-btn"
+                   onClick={()=> navigate("/contact")}
                 >
                   Get a Demo
                 </Button>
-                <Button
+                {/* <Button
                   size="md" radius="xl" variant="outline"
                   style={{ borderColor:btnOutline, color:btnTextOut }}
                   className="bk-btn"
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </Group>
 
             </Stack>

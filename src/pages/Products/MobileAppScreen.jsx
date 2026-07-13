@@ -341,6 +341,7 @@ import {
   IconArrowRight,
   IconPointFilled,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   { icon: IconDeviceMobile,  title: "Cross-Platform Builds",     desc: "Single codebase for both Android and iOS using React Native" },
@@ -357,6 +358,7 @@ const bullets = [
 ];
 
 const MobileAppScreen = () => {
+  const navigate = useNavigate();
   const isDark = useComputedColorScheme("light") === "dark";
 
   const accent      = isDark ? "#00D4C8"                    : "#0891B2";
@@ -403,7 +405,7 @@ const MobileAppScreen = () => {
             <Stack gap={20}>
 
               <Text fz={11} fw={700} style={{ color:accent, letterSpacing:2.5, textTransform:"uppercase" }}>
-                05 — Mobile Application
+                Mobile Application
               </Text>
 
               <Text fz={12} fw={600} style={{ color:textDim, letterSpacing:1.5, textTransform:"uppercase" }}>
@@ -481,16 +483,17 @@ const MobileAppScreen = () => {
                   rightSection={<IconArrowRight size={16}/>}
                   style={{ background:accent, color:btnPrimCol, fontWeight:700, border:"none" }}
                   className="ma-btn"
+                   onClick={()=> navigate("/contact")}
                 >
                   Discuss Your App
                 </Button>
-                <Button
+                {/* <Button
                   size="md" radius="xl" variant="outline"
                   style={{ borderColor:btnOutline, color:btnTextOut }}
                   className="ma-btn"
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </Group>
 
             </Stack>

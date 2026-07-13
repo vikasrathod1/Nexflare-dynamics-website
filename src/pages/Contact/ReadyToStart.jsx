@@ -10,8 +10,11 @@ import {
   useComputedColorScheme,
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 const ReadyToStart = () => {
+
+  const navigate = useNavigate();
   const colorScheme = useComputedColorScheme("light");
   const isDark = colorScheme === "dark";
 
@@ -106,7 +109,7 @@ const ReadyToStart = () => {
             </Text>
 
             <Group justify="center" gap="md" mt={36}>
-              <Button
+              {/* <Button
                 size="md"
                 radius="xl"
                 rightSection={<IconArrowRight size={16} />}
@@ -117,24 +120,39 @@ const ReadyToStart = () => {
                   color: "#062421",
                   fontWeight: 700,
                 }}
+                 onClick={() => navigate("/contact")}
               >
                 Call Us Now
-              </Button>
+              </Button> */}
 
-              <Button
-                size="md"
-                radius="xl"
-                variant="outline"
-                component="a"
-                href="mailto:hello@nexflaredynamics.com"
+              <Box
+                component="button"
+                type="button"
+                onClick={() =>
+                  window.open(
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=enquiry@nexflaredynamics.com&su=Project%20Inquiry&body=Hello%20Nexflare%20Dynamics,%0A%0AI%20would%20like%20to%20discuss%20my%20project.%0A%0ARegards,",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
                 style={{
-                  borderColor: isDark ? "rgba(148,163,184,.4)" : "rgba(100,116,139,.4)",
-                  color: textPrimary,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "12px 26px",
+                  borderRadius: "999px",
+                  border: `1px solid ${
+                    isDark ? "rgba(255,255,255,0.25)" : "rgba(15,23,42,0.25)"
+                  }`,
+                  // color: headingColor,
                   fontWeight: 600,
+                  fontSize: 14,
+                  background: "transparent",
+                  cursor: "pointer",
                 }}
               >
                 Email Us
-              </Button>
+              </Box>
             </Group>
           </Box>
         </Paper>

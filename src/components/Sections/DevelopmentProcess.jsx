@@ -322,7 +322,7 @@ const DevelopmentProcess = () => {
                         {step.description}
                       </Text>
 
-                      <Button
+                      {/* <Button
                         variant="subtle"
                         color={step.color}
                         rightSection={<IconArrowRight size={18} />}
@@ -334,7 +334,7 @@ const DevelopmentProcess = () => {
                         }}
                       >
                         Learn More
-                      </Button>
+                      </Button> */}
                     </MotionPaper>
                   </motion.div>
                 </Timeline.Item>

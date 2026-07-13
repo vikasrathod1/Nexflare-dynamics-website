@@ -1,7 +1,17 @@
-import { Box, Container, Text, Title, Stack, Group, useComputedColorScheme } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Text,
+  Title,
+  Stack,
+  Group,
+  useComputedColorScheme,
+} from "@mantine/core";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ElevateCTAScreen = () => {
+  const navigate = useNavigate();
   const computedColorScheme = useComputedColorScheme("light");
   const isDark = computedColorScheme === "dark";
 
@@ -52,7 +62,14 @@ const ElevateCTAScreen = () => {
             }}
           />
 
-          <Stack gap={0} align="center" ta="center" style={{ position: "relative" }} mx="auto" maw={620}>
+          <Stack
+            gap={0}
+            align="center"
+            ta="center"
+            style={{ position: "relative" }}
+            mx="auto"
+            maw={620}
+          >
             <Text
               fw={700}
               size="xs"
@@ -81,7 +98,11 @@ const ElevateCTAScreen = () => {
               Your Business?
             </Title>
 
-            <Text mt={22} size="md" style={{ color: bodyColor, lineHeight: 1.7 }}>
+            <Text
+              mt={22}
+              size="md"
+              style={{ color: bodyColor, lineHeight: 1.7 }}
+            >
               We don't just build software — we build possibilities. Let's
               create something extraordinary together that drives real,
               measurable results for your business.
@@ -103,23 +124,35 @@ const ElevateCTAScreen = () => {
                   fontSize: 14,
                   textDecoration: "none",
                 }}
+                onClick={() => navigate("/contact")}
               >
                 Schedule a Call <ArrowRight size={15} />
               </Box>
 
               <Box
-                component="a"
-                href="#email-us"
+                component="button"
+                type="button"
+                onClick={() =>
+                  window.open(
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=enquiry@nexflaredynamics.com&su=Project%20Inquiry&body=Hello%20Nexflare%20Dynamics,%0A%0AI%20would%20like%20to%20discuss%20my%20project.%0A%0ARegards,",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
+                  justifyContent: "center",
                   padding: "12px 26px",
-                  borderRadius: 999,
-                  border: `1px solid ${isDark ? "rgba(255,255,255,0.25)" : "rgba(15,23,42,0.25)"}`,
+                  borderRadius: "999px",
+                  border: `1px solid ${
+                    isDark ? "rgba(255,255,255,0.25)" : "rgba(15,23,42,0.25)"
+                  }`,
                   color: headingColor,
                   fontWeight: 600,
                   fontSize: 14,
-                  textDecoration: "none",
+                  background: "transparent",
+                  cursor: "pointer",
                 }}
               >
                 Email Us
