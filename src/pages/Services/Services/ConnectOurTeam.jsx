@@ -17,7 +17,7 @@ const team = [
     role: "Lead Software Engineer",
     // experience: "7+ years",
     location: "Pune, Maharashtra",
-    skills: ["Node.js", "Python", "AWS"],
+    skills: ["ReactJS", "JavaScript", "Java"],
     // Replace with your real team photo path, e.g. "/team/arjun.jpg"
     photo: "https://i.pravatar.cc/400?img=12",
   },

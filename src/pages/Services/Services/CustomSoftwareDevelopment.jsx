@@ -115,7 +115,6 @@ const CustomSoftwareDevelopment = () => {
                   {/* Section */}
 
                   <Group gap={8}>
-                    <Box w={45} h={2} bg="cyan" />
                     <Text
                       tt="uppercase"
                       fw={700}
@@ -125,7 +124,7 @@ const CustomSoftwareDevelopment = () => {
                         letterSpacing: 2,
                       }}
                     >
-                      01 — CUSTOM SOFTWARE DEVELOPMENT
+                      CUSTOM SOFTWARE DEVELOPMENT
                     </Text>
                   </Group>
 

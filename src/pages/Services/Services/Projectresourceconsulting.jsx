@@ -534,19 +534,20 @@ const ProjectResourceConsulting = () => {
           {/* LEFT SIDE */}
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Box p={{ base: 32, sm: 48, lg: 60 }}>
-              <Text
-                size="xs"
-                fw={700}
-                mb={16}
-                style={{
-                  letterSpacing: 2,
-                  textTransform: "uppercase",
-                  color: accent,
-                }}
-              >
-                Project & Resource Consulting
-              </Text>
-
+              <Group gap={8}>
+                <Text
+                  tt="uppercase"
+                  fw={700}
+                  size="xs"
+                  c="cyan"
+                  style={{
+                    letterSpacing: 2,
+                  }}
+                  mb={14}
+                >
+                  Project & Resource Consulting
+                </Text>
+              </Group>
               <Title
                 order={2}
                 style={{
@@ -686,7 +687,7 @@ const ProjectResourceConsulting = () => {
                     <Text
                       size="xs"
                       fw={700}
-                      c={accent}
+                      c="cyan"
                       tt="uppercase"
                       style={{ letterSpacing: 2 }}
                     >

@@ -416,15 +416,41 @@ const capabilities = [
   { icon: IconHeadset, label: "Long-Term Technical Support" },
 ];
 
-const techStack = ["React", "Java", "Spring Boot", "Node.js", "Docker", "AWS", "Kubernetes"];
+const techStack = [
+  "React",
+  "Java",
+  "Spring Boot",
+  "Node.js",
+  "Docker",
+  "AWS",
+  "Kubernetes",
+];
 
 // blue-themed satellites
 const satellites = [
-  { icon: IconDeviceDesktop, role: "Frontend", color: "#3b82f6", x: 0, y: -130 },
+  {
+    icon: IconDeviceDesktop,
+    role: "Frontend",
+    color: "#3b82f6",
+    x: 0,
+    y: -130,
+  },
   { icon: IconServer2, role: "Backend", color: "#6366f1", x: 123.6, y: -40.2 },
   { icon: IconTestPipe, role: "QA", color: "#06b6d4", x: 76.4, y: 105.2 },
-  { icon: IconSettingsCog, role: "DevOps", color: "#2563eb", x: -76.4, y: 105.2 },
-  { icon: IconUserCog, role: "Project Manager", color: "#4f46e5", x: -123.6, y: -40.2 },
+  {
+    icon: IconSettingsCog,
+    role: "DevOps",
+    color: "#2563eb",
+    x: -76.4,
+    y: 105.2,
+  },
+  {
+    icon: IconUserCog,
+    role: "Project Manager",
+    color: "#4f46e5",
+    x: -123.6,
+    y: -40.2,
+  },
 ];
 
 const SoftwareOutsourcing = () => {
@@ -450,10 +476,21 @@ const SoftwareOutsourcing = () => {
           {/* LEFT SIDE */}
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Box p={{ base: 32, sm: 48, lg: 60 }}>
-              <Badge variant="light" color="blue" radius="sm" mb={14}>
-                Software Outsourcing
-              </Badge>
 
+              <Group gap={8}>
+                <Text
+                  tt="uppercase"
+                  fw={700}
+                  size="xs"
+                  c="cyan"
+                  style={{
+                    letterSpacing: 2,
+                  }}
+                  mb={14}
+                >
+                  Software Outsourcing
+                </Text>
+              </Group>
               <Title
                 order={2}
                 style={{
@@ -466,9 +503,15 @@ const SoftwareOutsourcing = () => {
                 Scale Your Team With World-Class Software Engineers
               </Title>
 
-              <Text mt="md" size="md" maw={480} style={{ color: textSecondary }}>
-                Extend your in-house team with experienced engineers, QA specialists,
-                DevOps experts, and project managers — delivered with speed and transparency.
+              <Text
+                mt="md"
+                size="md"
+                maw={480}
+                style={{ color: textSecondary }}
+              >
+                Extend your in-house team with experienced engineers, QA
+                specialists, DevOps experts, and project managers — delivered
+                with speed and transparency.
               </Text>
 
               <SimpleGrid cols={{ base: 1, xs: 2 }} spacing="md" mt={32}>
@@ -570,7 +613,11 @@ const SoftwareOutsourcing = () => {
               <Box style={{ position: "relative", width: 300, height: 300 }}>
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+                  transition={{
+                    duration: 50,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
                   style={{
                     position: "absolute",
                     inset: 0,

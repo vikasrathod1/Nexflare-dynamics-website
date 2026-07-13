@@ -302,7 +302,7 @@ const Devops = () => {
                   size="lg"
                   w="fit-content"
                 >
-                  01 — DEVOPS
+                  DEVOPS
                 </Badge>
 
                 <Title
