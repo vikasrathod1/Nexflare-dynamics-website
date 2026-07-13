@@ -6,7 +6,10 @@ import CustomSoftwareDevelopment from "./CustomSoftwareDevelopment";
 import SoftwareOutsourcing from "./SoftwareOutsourcing";
 import Projectresourceconsulting from "./Projectresourceconsulting";
 import HowWeWork from "./HowWeWork";
-import IndustriesWeServe from "../../../components/Partners/IndustriesWeServe";
+import IndustriesWeServe from "./IndustriesWeServe";
+import ConnectOurTeam from "./ConnectOurTeam";
+import ClientReviews from "./ClientReviews";
+import LetsBuildTogether from "./LetsBuildTogether";
 
 
 
@@ -40,8 +43,9 @@ const Services = () => {
       <Projectresourceconsulting />
       <HowWeWork />
       <IndustriesWeServe />
-
-      
+      <ConnectOurTeam />
+      <ClientReviews />
+      <LetsBuildTogether />
     </Box>
   );
 };

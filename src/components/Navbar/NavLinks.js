@@ -219,9 +219,13 @@ const navLinks = [
     label: "Products",
     path: "/products",
   },
+  // {
+  //   label: "Careers",
+  //   path: "/careers",
+  // },
   {
-    label: "Careers",
-    path: "/careers",
+    label: "Blogs",
+    path: "/blogs",
   },
   {
     label: "Contact",

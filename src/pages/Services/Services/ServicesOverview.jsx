@@ -197,34 +197,35 @@ const MotionCard = motion.create(Card);
 const services = [
   {
     number: "01",
-    title: "Custom Software Development",
+    title: "Dev Ops",
     description:
-      "Enterprise-grade software engineered specifically for your business processes with scalability and performance in mind.",
-    icon: IconCode,
+      "CI/CD pipelines, infrastructure as code, automated monitoring. Seamless deployments with enterprise-grade reliability.",
+    icon: IconCloud,
     color: "#2563eb",
   },
   {
     number: "02",
-    title: "Mobile App Development",
+    title: "Software Outsourcing",  
     description:
-      "Beautiful Android and iOS applications delivering seamless user experiences and business growth.",
+      "End-to-end development using a global talent pool. High quality, cost-effective, and fully managed from discovery to launch.",
     icon: IconDeviceMobile,
     color: "#06b6d4",
   },
   {
     number: "03",
-    title: "Cloud & DevOps",
+    title: "Project & Resource Consulting",
     description:
-      "Cloud infrastructure, CI/CD pipelines, automation and deployment strategies for modern businesses.",
+      "Expert guidance, team augmentation, and strategic technology advisory for optimal project outcomes at every scale.",
     icon: IconCloud,
     color: "#8b5cf6",
   },
   {
     number: "04",
-    title: "AI & Automation",
+    title: "Custom Software Development",
     description:
-      "Leverage Artificial Intelligence, automation and smart workflows to increase efficiency.",
-    icon: IconBrain,
+      "Tailored web, mobile, and enterprise products built with agile methodology — aligned perfectly to your unique business goals.",
+    // icon: IconBrain,
+    icon: IconCode,
     color: "#10b981",
   },
 ];

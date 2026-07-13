@@ -1,643 +1,3 @@
-// import {
-//   Box,
-//   Button,
-//   Container,
-//   Grid,
-//   Group,
-//   Stack,
-//   Text,
-//   ThemeIcon,
-//   Title,
-//   useComputedColorScheme,
-// } from "@mantine/core";
-
-// import {
-//   IconArrowRight,
-//   IconCode,
-//   IconDeviceLaptop,
-//   IconRocket,
-//   IconBrandReact,
-//   IconBrandNextjs,
-//   IconBrandNodejs,
-//   IconBrandDocker,
-//   IconBrandAws,
-//   IconBrandMongodb,
-//   IconBrandJavascript,
-//   IconCloud,
-//   //   IconBrandJava,
-// } from "@tabler/icons-react";
-
-// import { motion } from "framer-motion";
-
-// const technologies = [
-//   { name: "React", icon: IconBrandReact, color: "#61DAFB" },
-//   { name: "Next.js", icon: IconBrandNextjs, color: "#000000" },
-//   { name: "Node.js", icon: IconBrandNodejs, color: "#3C873A" },
-//   //   { name: "Java", icon: IconBrandJava, color: "#F89820" },
-//   { name: "Spring Boot", icon: IconBrandJavascript, color: "#6DB33F" },
-//   { name: "MongoDB", icon: IconBrandMongodb, color: "#13AA52" },
-//   //   { name: "AWS", icon: IconBrandAws, color: "#FF9900" },
-//   { name: "DigitalOcean", icon: IconCloud, color: "#0080FF" },
-//   { name: "Docker", icon: IconBrandDocker, color: "#2496ED" },
-// ];
-
-// const Home = () => {
-//   const colorScheme = useComputedColorScheme("light");
-//   const isDark = colorScheme === "dark";
-
-//   return (
-//     <Box
-//       style={{
-//         minHeight: "100vh",
-//         position: "relative",
-//         overflow: "hidden",
-//         display: "flex",
-//         alignItems: "center",
-//         background: isDark
-//           ? "linear-gradient(135deg,#050816 0%,#081120 45%,#0F172A 100%)"
-//           : "linear-gradient(135deg,#ffffff 0%,#eef5ff 45%,#f8fbff 100%)",
-//       }}
-//     >
-//       {/* ================= BACKGROUND GLOW ================= */}
-
-//       <Box
-//         style={{
-//           position: "absolute",
-//           width: 550,
-//           height: 550,
-//           borderRadius: "50%",
-//           left: -220,
-//           top: -120,
-//           filter: "blur(120px)",
-//           background: isDark ? "rgba(37,99,235,.28)" : "rgba(37,99,235,.15)",
-//         }}
-//       />
-
-//       <Box
-//         style={{
-//           position: "absolute",
-//           width: 450,
-//           height: 450,
-//           borderRadius: "50%",
-//           right: -100,
-//           bottom: -120,
-//           filter: "blur(120px)",
-//           background: isDark ? "rgba(14,165,233,.22)" : "rgba(56,189,248,.18)",
-//         }}
-//       />
-
-//       {/* Grid Pattern */}
-
-//       <Box
-//         style={{
-//           position: "absolute",
-//           inset: 0,
-//           opacity: isDark ? 0.06 : 0.04,
-//           backgroundImage: `
-//           linear-gradient(to right,#80808018 1px,transparent 1px),
-//           linear-gradient(to bottom,#80808018 1px,transparent 1px)
-//         `,
-//           backgroundSize: "60px 60px",
-//         }}
-//       />
-
-//       <Container
-//         size="xl"
-//         pt={{ base: 100, sm: 110, lg: 120 }}
-//         pb={{ base: 60, sm: 80, lg: 20 }}
-//         style={{ position: "relative", zIndex: 5, width: "100%" }}
-//       >
-//         <Grid align="center" gutter={{ base: 30, sm: 40, lg: 60 }}>
-//           {/* ================= LEFT ================= */}
-
-//           <Grid.Col span={{ base: 12, md: 6 }}>
-//             <motion.div
-//               initial={{ opacity: 0, y: 70 }}
-//               animate={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.8 }}
-//               style={{ width: "100%" }}
-//             >
-//               <Stack
-//                 gap={{ base: 20, sm: 28, lg: 35 }}
-//                 style={{ width: "100%", textAlign: "inherit" }}
-//               >
-//                 {/* Small Badge */}
-
-//                 <Group
-//                   gap={10}
-//                   wrap="wrap"
-//                   style={{
-//                     justifyContent: "var(--content-align, center)",
-//                   }}
-//                   className="responsive-group"
-//                 >
-//                   <Box
-//                     style={{
-//                       display: "flex",
-//                       alignItems: "center",
-//                       gap: 10,
-//                       justifyContent: "inherit",
-//                       width: "100%",
-//                     }}
-//                   >
-//                     <ThemeIcon
-//                       size={38}
-//                       radius="xl"
-//                       variant="gradient"
-//                       gradient={{ from: "blue", to: "cyan" }}
-//                       style={{ flexShrink: 0 }}
-//                     >
-//                       <IconRocket size={20} />
-//                     </ThemeIcon>
-
-//                     <Text
-//                       fw={700}
-//                       style={{
-//                         letterSpacing: 1,
-//                         color: "#339AF0",
-//                         textTransform: "uppercase",
-//                         fontSize: "clamp(0.7rem, 2vw, 0.875rem)",
-//                       }}
-//                     >
-//                       Welcome to Nexflare Dynamics
-//                     </Text>
-//                   </Box>
-//                 </Group>
-
-//                 {/* Main Heading */}
-
-//                 <Title
-//                   order={1}
-//                   ta={{ base: "center", lg: "left" }}
-//                   style={{
-//                     fontSize: "clamp(2rem,4vw,5.5rem)",
-//                     lineHeight: 1.05,
-//                     fontWeight: 900,
-//                     color: isDark ? "#fff" : "#0F172A",
-//                     width: "100%",
-//                   }}
-//                 >
-//                   Build Powerful
-//                   <br />
-//                   <span
-//                     style={{
-//                       background: "linear-gradient(90deg,#2563EB,#38BDF8)",
-//                       WebkitBackgroundClip: "text",
-//                       WebkitTextFillColor: "transparent",
-//                     }}
-//                   >
-//                     Digital Experiences
-//                   </span>
-//                   <br />
-//                   For Your Business
-//                 </Title>
-
-//                 {/* Description */}
-
-//                 <Text
-//                   size="lg"
-//                   ta={{ base: "center", lg: "left" }}
-//                   style={{
-//                     lineHeight: 1.9,
-//                     color: isDark ? "#CBD5E1" : "#475569",
-//                     fontSize: "clamp(0.9rem, 2vw, 1.125rem)",
-//                     width: "100%",
-//                     maxWidth: "100%",
-//                   }}
-//                 >
-//                   We design, develop and scale modern websites, enterprise
-//                   software, SaaS platforms, mobile apps, cloud solutions and AI
-//                   powered products that help businesses grow faster in the
-//                   digital era.
-//                 </Text>
-
-//                 {/* Feature Pills */}
-
-//                 <Box
-//                   style={{
-//                     display: "flex",
-//                     flexWrap: "wrap",
-//                     gap: 16,
-//                     justifyContent: "center",
-//                     width: "100%",
-//                   }}
-//                   className="feature-pills"
-//                 >
-//                   <Group gap={8}>
-//                     <ThemeIcon color="blue" radius="xl" variant="light">
-//                       <IconCode size={18} />
-//                     </ThemeIcon>
-//                     <Text fw={600}>Web Development</Text>
-//                   </Group>
-
-//                   <Group gap={8}>
-//                     <ThemeIcon color="cyan" radius="xl" variant="light">
-//                       <IconDeviceLaptop size={18} />
-//                     </ThemeIcon>
-//                     <Text fw={600}>UI / UX Design</Text>
-//                   </Group>
-//                 </Box>
-
-//                 {/* CTA Buttons */}
-
-//                 <Box
-//                   style={{
-//                     display: "flex",
-//                     flexWrap: "wrap",
-//                     gap: 16,
-//                     justifyContent: "center",
-//                     marginTop: 10,
-//                     width: "100%",
-//                   }}
-//                   className="cta-buttons"
-//                 >
-//                   <Button
-//                     size="xl"
-//                     radius="xl"
-//                     rightSection={<IconArrowRight size={20} />}
-//                     variant="gradient"
-//                     gradient={{
-//                       from: "blue",
-//                       to: "cyan",
-//                     }}
-//                     style={{ fontSize: "clamp(0.85rem, 2vw, 1.125rem)" }}
-//                   >
-//                     Get Started
-//                   </Button>
-
-//                   <Button
-//                     size="xl"
-//                     radius="xl"
-//                     variant={isDark ? "white" : "outline"}
-//                     color={isDark ? "dark" : "blue"}
-//                     style={{ fontSize: "clamp(0.85rem, 2vw, 1.125rem)" }}
-//                   >
-//                     View Portfolio
-//                   </Button>
-//                 </Box>
-
-//                 {/* Inject responsive styles */}
-//                 <style>{`
-//                   @media (min-width: 992px) {
-//                     .feature-pills,
-//                     .cta-buttons {
-//                       justify-content: flex-start !important;
-//                     }
-//                     .responsive-group > div {
-//                       justify-content: flex-start !important;
-//                     }
-//                   }
-//                 `}</style>
-//               </Stack>
-//             </motion.div>
-//           </Grid.Col>
-//           {/* ================= RIGHT SIDE ================= */}
-
-//           <Grid.Col span={{ base: 12, md: 6 }}>
-//             <motion.div
-//               initial={{ opacity: 0, x: 80 }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 0.9 }}
-//             >
-//               <Box
-//                 style={{
-//                   position: "relative",
-//                   height: "auto",
-//                   minHeight: "auto",
-//                   display: "flex",
-//                   justifyContent: "center",
-//                   alignItems: "center",
-//                   padding: "20px 0",
-//                 }}
-//               >
-//                 {/* ================= MAIN GLASS CARD ================= */}
-
-//                 <motion.div
-//                   animate={{
-//                     y: [0, -12, 0],
-//                   }}
-//                   transition={{
-//                     duration: 5,
-//                     repeat: Infinity,
-//                   }}
-//                   style={{ width: "100%", maxWidth: 520 }}
-//                 >
-//                   <Box
-//                     className="main-glass-card"
-//                     style={{
-//                       width: "100%",
-//                       borderRadius: 30,
-//                       overflow: "hidden",
-//                       backdropFilter: "blur(25px)",
-//                       background: isDark
-//                         ? "rgba(255,255,255,.06)"
-//                         : "rgba(255,255,255,.80)",
-//                       border: isDark
-//                         ? "1px solid rgba(255,255,255,.12)"
-//                         : "1px solid rgba(37,99,235,.12)",
-//                       boxShadow: isDark
-//                         ? "0 30px 70px rgba(0,0,0,.45)"
-//                         : "0 30px 70px rgba(37,99,235,.12)",
-//                       padding: "clamp(16px, 4vw, 30px)",
-//                       position: "relative",
-//                       transition: "box-shadow 0.3s ease, border-color 0.3s ease",
-//                     }}
-//                   >
-//                     {/* Top */}
-
-//                     <Group justify="space-between" mb={25} wrap="nowrap">
-//                       <Text fw={700} size="lg" c={isDark ? "white" : "dark"}>
-//                         Nexflare Dashboard
-//                       </Text>
-
-//                       <ThemeIcon
-//                         radius="xl"
-//                         size="lg"
-//                         variant="gradient"
-//                         gradient={{
-//                           from: "blue",
-//                           to: "cyan",
-//                         }}
-//                       >
-//                         <IconRocket size={18} />
-//                       </ThemeIcon>
-//                     </Group>
-
-//                     {/* Fake Analytics */}
-
-//                     <Stack gap={18}>
-//                       <Box
-//                         style={{
-//                           height: 14,
-//                           borderRadius: 100,
-//                           background: isDark ? "#18233b" : "#dbeafe",
-//                         }}
-//                       >
-//                         <Box
-//                           style={{
-//                             width: "88%",
-//                             height: "100%",
-//                             borderRadius: 100,
-//                             background:
-//                               "linear-gradient(90deg,#2563EB,#38BDF8)",
-//                           }}
-//                         />
-//                       </Box>
-
-//                       <Box
-//                         style={{
-//                           height: 14,
-//                           borderRadius: 100,
-//                           background: isDark ? "#18233b" : "#dbeafe",
-//                         }}
-//                       >
-//                         <Box
-//                           style={{
-//                             width: "72%",
-//                             height: "100%",
-//                             borderRadius: 100,
-//                             background:
-//                               "linear-gradient(90deg,#06B6D4,#22D3EE)",
-//                           }}
-//                         />
-//                       </Box>
-
-//                       <Box
-//                         style={{
-//                           height: 14,
-//                           borderRadius: 100,
-//                           background: isDark ? "#18233b" : "#dbeafe",
-//                         }}
-//                       >
-//                         <Box
-//                           style={{
-//                             width: "95%",
-//                             height: "100%",
-//                             borderRadius: 100,
-//                             background:
-//                               "linear-gradient(90deg,#4F46E5,#3B82F6)",
-//                           }}
-//                         />
-//                       </Box>
-//                     </Stack>
-
-//                     {/* Statistics */}
-
-//                     <Grid mt={40} gutter={{ base: 10, sm: 16 }}>
-//                       <Grid.Col span={6}>
-//                         <Box
-//                           className="stat-card"
-//                           p={{ base: 14, sm: 20, md: 25 }}
-//                           style={{
-//                             borderRadius: 18,
-//                             background: isDark
-//                               ? "rgba(255,255,255,.05)"
-//                               : "#ffffff",
-//                             transition: "transform 0.25s ease, box-shadow 0.25s ease",
-//                             cursor: "default",
-//                           }}
-//                         >
-//                           <Text size="2rem" fw={800} c="blue" style={{ fontSize: "clamp(1.4rem, 4vw, 2rem)" }}>
-//                             250+
-//                           </Text>
-//                           <Text c="dimmed" style={{ fontSize: "clamp(0.75rem, 2vw, 1rem)" }}>Projects Delivered</Text>
-//                         </Box>
-//                       </Grid.Col>
-
-//                       <Grid.Col span={6}>
-//                         <Box
-//                           className="stat-card"
-//                           p={{ base: 14, sm: 20, md: 25 }}
-//                           style={{
-//                             borderRadius: 18,
-//                             background: isDark
-//                               ? "rgba(255,255,255,.05)"
-//                               : "#ffffff",
-//                             transition: "transform 0.25s ease, box-shadow 0.25s ease",
-//                             cursor: "default",
-//                           }}
-//                         >
-//                           <Text size="2rem" fw={800} c="cyan" style={{ fontSize: "clamp(1.4rem, 4vw, 2rem)" }}>
-//                             98%
-//                           </Text>
-//                           <Text c="dimmed" style={{ fontSize: "clamp(0.75rem, 2vw, 1rem)" }}>Client Satisfaction</Text>
-//                         </Box>
-//                       </Grid.Col>
-
-//                       <Grid.Col span={6}>
-//                         <Box
-//                           className="stat-card"
-//                           p={{ base: 14, sm: 20, md: 25 }}
-//                           style={{
-//                             borderRadius: 18,
-//                             background: isDark
-//                               ? "rgba(255,255,255,.05)"
-//                               : "#ffffff",
-//                             transition: "transform 0.25s ease, box-shadow 0.25s ease",
-//                             cursor: "default",
-//                           }}
-//                         >
-//                           <Text size="2rem" fw={800} c="grape" style={{ fontSize: "clamp(1.4rem, 4vw, 2rem)" }}>
-//                             35+
-//                           </Text>
-//                           <Text c="dimmed" style={{ fontSize: "clamp(0.75rem, 2vw, 1rem)" }}>Team Members</Text>
-//                         </Box>
-//                       </Grid.Col>
-
-//                       <Grid.Col span={6}>
-//                         <Box
-//                           className="stat-card"
-//                           p={{ base: 14, sm: 20, md: 25 }}
-//                           style={{
-//                             borderRadius: 18,
-//                             background: isDark
-//                               ? "rgba(255,255,255,.05)"
-//                               : "#ffffff",
-//                             transition: "transform 0.25s ease, box-shadow 0.25s ease",
-//                             cursor: "default",
-//                           }}
-//                         >
-//                           <Text size="2rem" fw={800} c="green" style={{ fontSize: "clamp(1.4rem, 4vw, 2rem)" }}>
-//                             24/7
-//                           </Text>
-//                           <Text c="dimmed" style={{ fontSize: "clamp(0.75rem, 2vw, 1rem)" }}>Technical Support</Text>
-//                         </Box>
-//                       </Grid.Col>
-//                     </Grid>
-
-//                     {/* Hover styles for main card border + stat zoom */}
-//                     <style>{`
-//                       .main-glass-card::before,
-//                       .main-glass-card::after {
-//                         content: '';
-//                         position: absolute;
-//                         border-radius: 30px;
-//                         pointer-events: none;
-//                         transition: opacity 0.4s ease;
-//                         opacity: 0;
-//                       }
-//                       /* Top-left corner */
-//                       .main-glass-card::before {
-//                         top: -2px;
-//                         left: -2px;
-//                         width: 60%;
-//                         height: 60%;
-//                         border-top: 2px solid #2563EB;
-//                         border-left: 2px solid #2563EB;
-//                         border-bottom: none;
-//                         border-right: none;
-//                         border-radius: 30px 0 0 0;
-//                       }
-//                       /* Bottom-right corner */
-//                       .main-glass-card::after {
-//                         bottom: -2px;
-//                         right: -2px;
-//                         width: 60%;
-//                         height: 60%;
-//                         border-bottom: 2px solid #38BDF8;
-//                         border-right: 2px solid #38BDF8;
-//                         border-top: none;
-//                         border-left: none;
-//                         border-radius: 0 0 30px 0;
-//                       }
-//                       .main-glass-card:hover::before,
-//                       .main-glass-card:hover::after {
-//                         opacity: 1;
-//                       }
-//                       .main-glass-card:hover {
-//                         box-shadow: 0 40px 90px rgba(37,99,235,.28) !important;
-//                       }
-//                       .stat-card:hover {
-//                         transform: scale(1.06);
-//                         box-shadow: 0 8px 30px rgba(37,99,235,.18);
-//                       }
-//                     `}</style>
-//                   </Box>
-//                 </motion.div>
-
-//               </Box>
-//             </motion.div>
-//           </Grid.Col>
-//           {/* ================= END GRID ================= */}
-//         </Grid>
-
-//         <Box mt={{ base: 30, sm: 40, lg: 50 }}>
-//           <Stack align="center" mb={40}>
-//             <Text
-//               fw={800}
-//               fz={14}
-//               tt="uppercase"
-//               c="blue"
-//               style={{ letterSpacing: 3, textAlign: "center" }}
-//             >
-//               Technologies We've Mastered and Integrated
-//             </Text>
-
-//           </Stack>
-
-//           <Box
-//             style={{
-//               overflow: "hidden",
-//               width: "100%",
-//               position: "relative",
-//               padding: "15px 0",
-//             }}
-//           >
-//             <motion.div
-//               style={{
-//                 display: "flex",
-//                 gap: 25,
-//                 width: "max-content",
-//               }}
-//               animate={{
-//                 x: ["0%", "-50%"],
-//               }}
-//               transition={{
-//                 repeat: Infinity,
-//                 duration: 22,
-//                 ease: "linear",
-//               }}
-//             >
-//               {[...technologies, ...technologies].map(
-//                 ({ name, icon: Icon, color }, index) => (
-//                   <Box
-//                     key={index}
-//                     px={{ base: 16, sm: 22, md: 28 }}
-//                     py={{ base: 12, sm: 16, md: 18 }}
-//                     style={{
-//                       display: "flex",
-//                       alignItems: "center",
-//                       gap: 15,
-//                       borderRadius: 18,
-//                       minWidth: 170,
-//                       backdropFilter: "blur(18px)",
-//                       background: isDark ? "rgba(255,255,255,.05)" : "#ffffff",
-//                       border: isDark
-//                         ? "1px solid rgba(255,255,255,.08)"
-//                         : "1px solid #E5E7EB",
-//                       boxShadow: isDark
-//                         ? "0 10px 35px rgba(0,0,0,.35)"
-//                         : "0 10px 35px rgba(0,0,0,.08)",
-//                     }}
-//                   >
-//                     <Icon size={28} color={color} />
-
-//                     <Text fw={700} size="md">
-//                       {name}
-//                     </Text>
-//                   </Box>
-//                 ),
-//               )}
-//             </motion.div>
-//           </Box>
-//         </Box>
-//       </Container>
-//     </Box>
-//   );
-// };
-
-// export default Home;
-
 import {
   Box,
   Button,
@@ -674,6 +34,8 @@ import {
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 // import WhyChooseUs from "../../components/Sections/WhyChooseUs";
 import DevelopmentProcess from "../../components/Sections/DevelopmentProcess";
@@ -693,8 +55,13 @@ const technologies = [
 ];
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
   const colorScheme = useComputedColorScheme("light");
   const isDark = colorScheme === "dark";
+
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -707,9 +74,50 @@ const Home = () => {
   const handleChange = (field) => (e) =>
     setFormData((prev) => ({ ...prev, [field]: e.target.value }));
 
-  const handleSubmit = () => {
-    if (formData.name && formData.email && formData.message) {
-      setSubmitted(true);
+  const handleSubmit = async () => {
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/api/contact/send",
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+      );
+
+      if (response.data.success) {
+        setSubmitted(true);
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        alert(response.data.message);
+      }
+    } catch (error) {
+      console.error(error);
+      alert(
+        error.response?.data?.message ||
+          "Something went wrong. Please try again.",
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -839,7 +247,7 @@ const Home = () => {
                       width: "100%",
                     }}
                   >
-                    Build Powerful
+                    Software
                     <br />
                     <span
                       style={{
@@ -848,10 +256,10 @@ const Home = () => {
                         WebkitTextFillColor: "transparent",
                       }}
                     >
-                      Digital Experiences
+                      Development
                     </span>
                     <br />
-                    For Your Business
+                    Company
                   </Title>
 
                   {/* Description */}
@@ -866,10 +274,9 @@ const Home = () => {
                       maxWidth: "100%",
                     }}
                   >
-                    We design, develop and scale modern websites, enterprise
-                    software, SaaS platforms, mobile apps, cloud solutions and
-                    AI powered products that help businesses grow faster in the
-                    digital era.
+                    Revolutionizing software solutions with innovative digital
+                    technologies to maximize productivity, ease business
+                    operations, and deliver seamless user interactions.
                   </Text>
 
                   {/* Feature Pills */}
@@ -916,10 +323,11 @@ const Home = () => {
                       variant="gradient"
                       gradient={{ from: "blue", to: "cyan" }}
                       style={{ fontSize: "clamp(0.85rem, 2vw, 1.125rem)" }}
+                      onClick={() => navigate("/contact")}
                     >
                       Get Started
                     </Button>
-                    <Button
+                    {/* <Button
                       size="xl"
                       radius="xl"
                       variant={isDark ? "white" : "outline"}
@@ -927,6 +335,24 @@ const Home = () => {
                       style={{ fontSize: "clamp(0.85rem, 2vw, 1.125rem)" }}
                     >
                       View Portfolio
+                    </Button> */}
+
+                    <Button
+                      size="xl"
+                      radius="xl"
+                      variant={isDark ? "white" : "outline"}
+                      color={isDark ? "dark" : "blue"}
+                      style={{ fontSize: "clamp(0.85rem, 2vw, 1.125rem)" }}
+                      onClick={() => {
+                        document
+                          .getElementById("our-services")
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                      }}
+                    >
+                      Our Services
                     </Button>
                   </Box>
 
@@ -961,8 +387,8 @@ const Home = () => {
                   }}
                 >
                   <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ duration: 6, repeat: Infinity }}
+                    // animate={{ y: [0, -10, 0] }}
+                    // transition={{ duration: 6, repeat: Infinity }}
                     style={{ width: "100%", maxWidth: 520 }}
                   >
                     <Box
@@ -1162,8 +588,7 @@ const Home = () => {
                             leftSection={<IconMessageCircle size={16} />}
                             radius="xl"
                             size="md"
-                            minRows={3}
-                            autosize
+                            rows={4}
                             styles={{
                               input: {
                                 background: isDark
@@ -1174,11 +599,12 @@ const Home = () => {
                                   : "1px solid #DBEAFE",
                                 color: isDark ? "#fff" : "#0F172A",
                                 resize: "none",
+                                overflowY: "auto",
                               },
                             }}
                           />
 
-                          <Button
+                          {/* <Button
                             size="lg"
                             radius="xl"
                             fullWidth
@@ -1190,6 +616,24 @@ const Home = () => {
                             style={{ fontWeight: 700 }}
                           >
                             Send Message
+                          </Button> */}
+
+                          <Button
+                            size="lg"
+                            radius="xl"
+                            fullWidth
+                            loading={loading}
+                            loaderProps={{
+                              type: "oval",
+                            }}
+                            rightSection={!loading && <IconSend size={18} />}
+                            variant="gradient"
+                            gradient={{ from: "blue", to: "cyan" }}
+                            mt={6}
+                            onClick={handleSubmit}
+                            style={{ fontWeight: 700 }}
+                          >
+                            {loading ? "Sending..." : "Send Message"}
                           </Button>
 
                           <Text size="xs" c="dimmed" ta="center">
@@ -1303,7 +747,10 @@ const Home = () => {
       </Box>
 
       {/* <WhyChooseUs /> */}
-      <OurServices />
+      {/* <OurServices /> */}
+      <div id="our-services">
+        <OurServices />
+      </div>
       <DevelopmentProcess />
       <IndustriesWeServe />
       <ClientTestimonials />

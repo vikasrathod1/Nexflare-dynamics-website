@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { Box, useComputedColorScheme } from "@mantine/core";
 import ContactHero from "./ContactHero";
+import ContactFormScreen from "./Contactformscreen";
+import OfficeLocation from "./Officelocation";
+import SocialConnect from "./Socialconnect";
+import ReadyToStart from "./ReadyToStart";
 
 
 
@@ -35,6 +39,10 @@ const Contact = () => {
       }}
     >
       <ContactHero />
+      <ContactFormScreen />
+      <OfficeLocation />
+      <SocialConnect />
+      <ReadyToStart />
     </Box>
   );
 };

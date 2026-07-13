@@ -28,6 +28,7 @@ import MissionVision from "./MissionVision";
 import WhyChooseUs from "./WhyChooseUs";
 import OurServicesOverview from "./OurServicesOverview";
 import MeetOurTeam from "./MeetOurTeam";
+import ElevateCTAScreen from "./Elevatectascreen";
 
 const About = () => {
   const computedColorScheme = useComputedColorScheme("light");
@@ -56,6 +57,7 @@ const About = () => {
       <WhyChooseUs />
       <OurServicesOverview />
       <MeetOurTeam />
+      <ElevateCTAScreen />
     </Box>
   );
 };

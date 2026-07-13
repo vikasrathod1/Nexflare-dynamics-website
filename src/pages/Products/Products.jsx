@@ -1,5 +1,17 @@
 import { Box, useComputedColorScheme } from "@mantine/core";
 import ProductHero from "./ProductHero";
+import HRMSoftwareScreen from "./HRMSoftwareScreen";
+import ERPSoftwareScreen from "./Erpsoftwarescreen";
+import CRMSoftwareScreen from "./CRMsoftwarescreen";
+import ProjectManagementScreen from "./ProjectManagementScreen";
+import BookingScreen from "./BookingScreen";
+import MobileAppScreen from "./MobileAppScreen";
+import FinanceScreen from "./FinanceScreen";
+import ComparisonScreen from "./ComparisonScreen";
+import IndustriesScreen from "./Industriesscreen";
+import NexflareSuiteScreen from "./NexflareSuiteScreen";
+import Ctascreen from "./Ctascreen";
+import CTAScreen from "./Ctascreen";
 
 
 const Products = () => {
@@ -24,6 +36,18 @@ const Products = () => {
       }}
     >
       <ProductHero />
+      <HRMSoftwareScreen />
+      <ERPSoftwareScreen />
+      <CRMSoftwareScreen />
+      <ProjectManagementScreen />
+      <MobileAppScreen />
+      <BookingScreen />
+      <FinanceScreen />
+      <ComparisonScreen />
+      <IndustriesScreen />
+      <NexflareSuiteScreen />
+      <CTAScreen />
+
      
     </Box>
   );

@@ -1,7 +1,307 @@
+
+// import {
+//   ActionIcon,
+//   Anchor,
+//   Box,
+//   Button,
+//   Container,
+//   Divider,
+//   Grid,
+//   Group,
+//   Image,
+//   Stack,
+//   Text,
+//   useComputedColorScheme,
+// } from "@mantine/core";
+
+// import {
+//   IconArrowUp,
+//   IconBrandFacebook,
+//   IconBrandGithub,
+//   IconBrandInstagram,
+//   IconBrandLinkedin,
+//   IconBrandX,
+//   IconMail,
+//   IconMapPin,
+//   IconPhone,
+//   IconSend,
+//   IconChevronRight,
+// } from "@tabler/icons-react";
+
+// import { motion } from "framer-motion";
+// import { Link } from "react-router-dom";
+
+// import logoLight   from "../../assets/images/logo.png";
+// import logoDark    from "../../assets/images/logo1.png";
+
+// const quickLinks = [
+//   { label:"Home",     link:"/" },
+//   { label:"About",    link:"/about" },
+//   { label:"Services", link:"/services" },
+//   { label:"Products", link:"/products" },
+//   { label:"Blogs",    link:"/blogs" },
+//   { label:"Contact",  link:"/contact" },
+// ];
+
+// const services = [
+//   { label:"Web Development", link:"/services" },
+//   { label:"Mobile Apps",     link:"/services" },
+//   { label:"Custom Software", link:"/services" },
+//   { label:"UI/UX Design",    link:"/services" },
+//   { label:"Cloud Solutions", link:"/services" },
+//   { label:"AI Solutions",    link:"/services" },
+// ];
+
+// const socialLinks = [
+//   { Icon:IconBrandFacebook,  href:"https://www.facebook.com/NexflareDynamics", label:"Facebook",  color:"#1877F2" },
+//   { Icon:IconBrandInstagram, href:"https://www.instagram.com/nexflare_dynamics/", label:"Instagram", color:"#E1306C" },
+//   { Icon:IconBrandLinkedin,  href:"https://www.linkedin.com/company/nexflare-dynamics/", label:"LinkedIn",  color:"#0A66C2" },
+//   { Icon:IconBrandX,         href:"https://twitter.com/NexflareDynamics", label:"X",         color:"#1DA1F2" },
+//   // { Icon:IconBrandGithub,    href:"https://github.com/NexflareDynamics", label:"GitHub",    color:"#7C3AED" },
+// ];
+
+// const contacts = [
+//   { Icon:IconMapPin, text:"GLOBAL BUSINESS HUB, EON Free Zone, Kharadi, Pune, Maharashtra 411014",      color:"#3B82F6" },
+//   { Icon:IconPhone,  text:"+91-8237525097",                color:"#10B981" },
+//   { Icon:IconMail,   text:"enquiry@nexflaredynamics.com",  color:"#8B5CF6" },
+// ];
+
+// const Footer = () => {
+//   const isDark  = useComputedColorScheme("light") === "dark";
+//   const logoSrc = isDark ? logoDark : logoLight;
+
+//   const bg         = isDark ? "#080E1C" : "#EEF4FF";
+//   const cardBg     = isDark ? "rgba(255,255,255,0.04)" : "#ffffff";
+//   const cardBorder = isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(37,99,235,0.12)";
+//   const dimCol     = isDark ? "rgba(255,255,255,0.50)" : "#64748b";
+
+//   return (
+//     <Box style={{ background:bg, position:"relative", overflow:"hidden" }}>
+
+//       {/* ambient glows */}
+//       <Box style={{ position:"absolute", width:500, height:500, borderRadius:"50%",
+//         left:-220, top:-220, background:"rgba(37,99,235,0.12)",
+//         filter:"blur(160px)", pointerEvents:"none" }} />
+//       <Box style={{ position:"absolute", width:400, height:400, borderRadius:"50%",
+//         right:-180, bottom:-180, background:"rgba(56,189,248,0.09)",
+//         filter:"blur(140px)", pointerEvents:"none" }} />
+
+//       {/* animated top line */}
+//       <Box style={{
+//         height:3,
+//         background:"linear-gradient(90deg,#2563EB,#8B5CF6,#38BDF8,#2563EB)",
+//         backgroundSize:"200% 100%",
+//         animation:"shimmer 4s linear infinite",
+//       }} />
+
+//       <Container size="xl" py={40}>
+//         <motion.div
+//           initial={{ opacity:0, y:22 }}
+//           whileInView={{ opacity:1, y:0 }}
+//           viewport={{ once:true }}
+//           transition={{ duration:0.55 }}
+//         >
+//           <Grid gutter={{ base:28, md:36 }} align="flex-start">
+
+//             {/* ── Brand ── */}
+//             <Grid.Col span={{ base:12, sm:6, lg:4 }}>
+//               <Stack gap={12}>
+//                 <Image src={logoSrc} w={170} />
+//                 <Text size="sm" lh={1.75} style={{ color:dimCol, maxWidth:300 }}>
+//                   Our mission is to understand the unique challenges faced by our clients and deliver tailored solutions that drive efficiency, productivity, and growth.
+//                 </Text>
+//                 <Group gap={8} mt={2}>
+//                   {socialLinks.map(({ Icon, href, label, color }) => (
+//                     <ActionIcon
+//                       key={label}
+//                       component="a"
+//                       href={href}
+//                       aria-label={label}
+//                       size={38}
+//                       radius="xl"
+//                       className="f-social"
+//                       style={{
+//                         background:`${color}14`,
+//                         border:`1px solid ${color}28`,
+//                         color:color,
+//                       }}
+//                     >
+//                       <Icon size={17} />
+//                     </ActionIcon>
+//                   ))}
+//                 </Group>
+//               </Stack>
+//             </Grid.Col>
+
+//             {/* ── Company ── */}
+//             <Grid.Col span={{ base:6, sm:3, lg:2 }}>
+//               <Stack gap={0}>
+//                 <Text size="xs" fw={700} tt="uppercase"
+//                   style={{ color:"#3B82F6", letterSpacing:2 }} mb={14}>
+//                   Company
+//                 </Text>
+//                 {quickLinks.map(({ label, link }) => (
+//                   <Anchor key={label} component={Link} to={link}
+//                     underline="never" size="sm" mb={10} className="f-link"
+//                     style={{ color:dimCol, display:"flex", alignItems:"center", gap:4 }}>
+//                     <IconChevronRight size={12} style={{ opacity:0.45, flexShrink:0 }} />
+//                     {label}
+//                   </Anchor>
+//                 ))}
+//               </Stack>
+//             </Grid.Col>
+
+//             {/* ── Services ── */}
+//             <Grid.Col span={{ base:6, sm:3, lg:2 }}>
+//               <Stack gap={0}>
+//                 <Text size="xs" fw={700} tt="uppercase"
+//                   style={{ color:"#8B5CF6", letterSpacing:2 }} mb={14}>
+//                   Services
+//                 </Text>
+//                 {services.map(({ label, link }) => (
+//                   <Anchor key={label} component={Link} to={link}
+//                     underline="never" size="sm" mb={10} className="f-link"
+//                     style={{ color:dimCol, display:"flex", alignItems:"center", gap:4 }}>
+//                     <IconChevronRight size={12} style={{ opacity:0.45, flexShrink:0 }} />
+//                     {label}
+//                   </Anchor>
+//                 ))}
+//               </Stack>
+//             </Grid.Col>
+
+//             {/* ── Contact card ── */}
+//             <Grid.Col span={{ base:12, sm:6, lg:4 }}>
+//               <Box style={{
+//                 background:cardBg, border:cardBorder,
+//                 borderRadius:20, padding:"22px 22px 18px",
+//                 position:"relative", overflow:"hidden",
+//                 boxShadow: isDark
+//                   ? "0 10px 36px rgba(0,0,0,0.24)"
+//                   : "0 10px 36px rgba(37,99,235,0.08)",
+//               }}>
+//                 {/* top accent */}
+//                 <Box style={{
+//                   position:"absolute", top:0, left:0, right:0, height:3,
+//                   background:"linear-gradient(90deg,#2563EB,#8B5CF6,#38BDF8)",
+//                 }} />
+
+//                 <Text size="xs" fw={700} tt="uppercase"
+//                   style={{ color:dimCol, letterSpacing:2 }} mb={16}>
+//                   Get in Touch
+//                 </Text>
+
+//                 <Stack gap={12}>
+//                   {contacts.map(({ Icon, text, color }) => (
+//                     <Group key={text} gap={10} wrap="nowrap" align="flex-start">
+//                       <Box style={{
+//                         width:32, height:32, borderRadius:9, flexShrink:0,
+//                         background:`${color}14`,
+//                         display:"flex", alignItems:"center", justifyContent:"center",
+//                       }}>
+//                         <Icon size={15} color={color} />
+//                       </Box>
+//                       <Text size="sm" style={{ color:dimCol, lineHeight:1.55, paddingTop:5 }}>
+//                         {text}
+//                       </Text>
+//                     </Group>
+//                   ))}
+//                 </Stack>
+
+//                 <Button mt={18} radius="xl" size="sm" fullWidth
+//                   variant="gradient" gradient={{ from:"blue", to:"cyan" }}
+//                   rightSection={<IconSend size={14} />}
+//                   fw={600} style={{ height:40 }} className="f-btn">
+//                   Request a Free Quote
+//                 </Button>
+//               </Box>
+//             </Grid.Col>
+
+//           </Grid>
+//         </motion.div>
+
+//         {/* bottom bar */}
+//         <Divider mt={32} mb={18} color={isDark ? "rgba(255,255,255,0.07)" : "#E2E8F0"} />
+
+//         <motion.div
+//           initial={{ opacity:0 }}
+//           whileInView={{ opacity:1 }}
+//           viewport={{ once:true }}
+//           transition={{ duration:0.4, delay:0.1 }}
+//         >
+//           <Group justify="space-between" align="center" wrap="wrap" gap={10}>
+//             <Stack gap={3}>
+//               <Text size="xs" style={{ color:dimCol }}>
+//                 © {new Date().getFullYear()} Nexflare Dynamics. All rights reserved.
+//               </Text>
+//               <Group gap={12}>
+//                 {[
+//                   { label:"Privacy Policy",   to:"/privacy-policy" },
+//                   { label:"Terms of Service", to:"/terms" },
+//                   { label:"Cookie Policy",    to:"/cookies" },
+//                 ].map(({ label, to }) => (
+//                   <Anchor key={label} component={Link} to={to}
+//                     underline="never" size="xs"
+//                     style={{ color:dimCol }} className="f-link">
+//                     {label}
+//                   </Anchor>
+//                 ))}
+//               </Group>
+//             </Stack>
+
+//             <Group gap={10} align="center">
+//               <Text size="xs" style={{ color:dimCol }}>Made with ❤️ in India</Text>
+//               <ActionIcon radius="xl" size={40} variant="gradient"
+//                 gradient={{ from:"blue", to:"cyan" }}
+//                 aria-label="Back to top" className="f-social"
+//                 onClick={() => window.scrollTo({ top:0, behavior:"smooth" })}>
+//                 <IconArrowUp size={17} />
+//               </ActionIcon>
+//             </Group>
+//           </Group>
+//         </motion.div>
+//       </Container>
+
+//       <style>{`
+//         @keyframes shimmer {
+//           0%   { background-position: 0% 0; }
+//           100% { background-position: 200% 0; }
+//         }
+//         .f-link {
+//           transition: color .2s ease, transform .2s ease;
+//         }
+//         .f-link:hover {
+//           color: #2563EB !important;
+//           transform: translateX(4px);
+//         }
+//         .f-social {
+//           transition: transform .22s ease, box-shadow .22s ease !important;
+//         }
+//         .f-social:hover {
+//           transform: translateY(-4px) scale(1.12) !important;
+//           box-shadow: 0 8px 20px rgba(37,99,235,0.26) !important;
+//         }
+//         .f-btn {
+//           transition: transform .22s ease, box-shadow .22s ease !important;
+//         }
+//         .f-btn:hover {
+//           transform: translateY(-2px) !important;
+//           box-shadow: 0 8px 24px rgba(37,99,235,0.28) !important;
+//         }
+//         @media (max-width: 768px) {
+//           .f-btn { width: 100%; }
+//         }
+//       `}</style>
+//     </Box>
+//   );
+// };
+
+// export default Footer;
+
+
+
 import {
   ActionIcon,
   Anchor,
-  Badge,
   Box,
   Button,
   Container,
@@ -9,12 +309,8 @@ import {
   Grid,
   Group,
   Image,
-  Paper,
   Stack,
   Text,
-  TextInput,
-  ThemeIcon,
-  Title,
   useComputedColorScheme,
 } from "@mantine/core";
 
@@ -30,548 +326,269 @@ import {
   IconPhone,
   IconSend,
   IconChevronRight,
-  IconSparkles,
 } from "@tabler/icons-react";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import logoLight from "../../assets/images/logo.png";
-import logoDarkLogo from "../../assets/images/logo1.png";
+import logoLight   from "../../assets/images/logo.png";
+import logoDark    from "../../assets/images/logo1.png";
 
 const quickLinks = [
-  { label: "Home", link: "/" },
-  { label: "About", link: "/about" },
-  { label: "Services", link: "/services" },
-  // { label: "Portfolio", link: "/portfolio" },
-  { label: "Careers", link: "/careers" },
-  { label: "Contact", link: "/contact" },
+  { label:"Blog",     link:"/" },
+  { label:"Privacy Policy",    link:"/privacy-policy" },
+  { label:"About Us", link:"/services" },
+  { label:"Contact Us", link:"/products" },
+  { label:"Terms & Conditions",    link:"/blogs" },
+  { label:"Refund Policy",  link:"/refund-policy" },
 ];
 
 const services = [
-  { label: "Web Development", link: "/services" },
-  { label: "Mobile Apps", link: "/services" },
-  { label: "Custom Software", link: "/services" },
-  { label: "UI/UX Design", link: "/services" },
-  { label: "Cloud Solutions", link: "/services" },
-  { label: "AI Solutions", link: "/services" },
+  { label:"Search Engine Optimization", link:"/services" },
+  { label:"Pay Per Click Advertising",     link:"/services" },
+  { label:"Social Media Marketing", link:"/services" },
+  { label:"Web Design & Development",    link:"/services" },
+  { label:"App Development", link:"/services" },
+  { label:"CRM Services",    link:"/services" },
 ];
 
 const socialLinks = [
-  { Icon: IconBrandFacebook, href: "#", label: "Facebook" },
-  { Icon: IconBrandInstagram, href: "#", label: "Instagram" },
-  { Icon: IconBrandLinkedin, href: "#", label: "LinkedIn" },
-  { Icon: IconBrandX, href: "#", label: "X (Twitter)" },
-  { Icon: IconBrandGithub, href: "#", label: "GitHub" },
+  { Icon:IconBrandFacebook,  href:"https://www.facebook.com/NexflareDynamics", label:"Facebook",  color:"#1877F2" },
+  { Icon:IconBrandInstagram, href:"https://www.instagram.com/nexflare_dynamics/", label:"Instagram", color:"#E1306C" },
+  { Icon:IconBrandLinkedin,  href:"https://www.linkedin.com/company/nexflare-dynamics/", label:"LinkedIn",  color:"#0A66C2" },
+  { Icon:IconBrandX,         href:"https://twitter.com/NexflareDynamics", label:"X",         color:"#1DA1F2" },
+  // { Icon:IconBrandGithub,    href:"https://github.com/NexflareDynamics", label:"GitHub",    color:"#7C3AED" },
 ];
 
-const stats = [
-  { value: "200+", label: "Projects Delivered" },
-  { value: "50+", label: "Expert Engineers" },
-  { value: "98%", label: "Client Satisfaction" },
+const contacts = [
+  { Icon:IconMapPin, text:"GLOBAL BUSINESS HUB, EON Free Zone, Kharadi, Pune, Maharashtra 411014",      color:"#3B82F6" },
+  { Icon:IconPhone,  text:"+91-8237525097",                color:"#10B981" },
+  { Icon:IconMail,   text:"enquiry@nexflaredynamics.com",  color:"#8B5CF6" },
 ];
-
-const fadeUp = {
-  initial: { opacity: 0, y: 28 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.65, ease: "easeOut" },
-};
 
 const Footer = () => {
-  const isDark = useComputedColorScheme("light") === "dark";
+  const isDark  = useComputedColorScheme("light") === "dark";
+  const logoSrc = isDark ? logoDark : logoLight;
 
-  const bg = isDark ? "#080E1C" : "#F0F4FF";
-  const cardBg = isDark ? "rgba(255,255,255,0.035)" : "#ffffff";
-  const cardBorder = isDark
-    ? "1px solid rgba(255,255,255,0.07)"
-    : "1px solid rgba(37,99,235,0.10)";
-  const textCol = isDark ? "rgba(255,255,255,0.88)" : "#1e293b";
-  const dimCol = isDark ? "rgba(255,255,255,0.46)" : "#64748b";
-
-  const isDarkLogo = useComputedColorScheme("light") === "dark";
-
-  const logoSrc = isDark ? logoDarkLogo : logoLight;
+  const bg         = isDark ? "#080E1C" : "#EEF4FF";
+  const cardBg     = isDark ? "rgba(255,255,255,0.04)" : "#ffffff";
+  const cardBorder = isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(37,99,235,0.12)";
+  const dimCol     = isDark ? "rgba(255,255,255,0.50)" : "#64748b";
 
   return (
-    <Box
-      style={{
-        background: bg,
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      {/* ── ambient glows ── */}
-      {[
-        { left: -200, top: -200, color: "rgba(37,99,235,0.14)" },
-        { right: -200, bottom: -200, color: "rgba(56,189,248,0.10)" },
-        { left: "40%", top: "30%", color: "rgba(99,102,241,0.07)" },
-      ].map((g, i) => (
-        <Box
-          key={i}
-          style={{
-            position: "absolute",
-            width: 480,
-            height: 480,
-            borderRadius: "50%",
-            background: g.color,
-            filter: "blur(160px)",
-            pointerEvents: "none",
-            ...g,
-          }}
-        />
-      ))}
+    <Box style={{ background:bg, position:"relative", overflow:"hidden" }}>
 
-      {/* ══════════════════════════════════════════
-          NEWSLETTER BANNER  (moved to top)
-      ══════════════════════════════════════════ */}
-      {/* <Box
-        style={{
-          background: isDark
-            ? "linear-gradient(120deg,#0F1E4A 0%,#1D3FAA 50%,#0F2260 100%)"
-            : "linear-gradient(120deg,#1D4ED8 0%,#2563EB 55%,#0EA5E9 100%)",
-          borderBottom: isDark
-            ? "1px solid rgba(255,255,255,0.06)"
-            : "1px solid rgba(37,99,235,0.18)",
-        }}
-      >
-        <Container size="xl" py={52}>
-          <motion.div {...fadeUp}>
-            <Grid align="center" gutter={40}>
-              <Grid.Col span={{ base: 12, md: 7 }}>
-                <Group gap={10} mb={14} wrap="nowrap">
-                  <ThemeIcon
-                    radius="xl"
-                    size={30}
-                    color="white"
-                    variant="subtle"
-                    style={{ color: "#fff" }}
-                  >
-                    <IconSparkles size={17} />
-                  </ThemeIcon>
-                  <Text
-                    size="xs"
-                    fw={700}
-                    tt="uppercase"
-                    style={{ color: "rgba(255,255,255,0.8)", letterSpacing: 2 }}
-                  >
-                    Newsletter
-                  </Text>
-                </Group>
+      {/* ambient glows */}
+      <Box style={{ position:"absolute", width:500, height:500, borderRadius:"50%",
+        left:-220, top:-220, background:"rgba(37,99,235,0.12)",
+        filter:"blur(160px)", pointerEvents:"none" }} />
+      <Box style={{ position:"absolute", width:400, height:400, borderRadius:"50%",
+        right:-180, bottom:-180, background:"rgba(56,189,248,0.09)",
+        filter:"blur(140px)", pointerEvents:"none" }} />
 
-                <Title
-                  order={2}
-                  c="white"
-                  style={{ fontWeight: 800, lineHeight: 1.25 }}
-                >
-                  Stay ahead of the curve.
-                </Title>
+      {/* animated top line */}
+      <Box style={{
+        height:3,
+        background:"linear-gradient(90deg,#2563EB,#8B5CF6,#38BDF8,#2563EB)",
+        backgroundSize:"200% 100%",
+        animation:"shimmer 4s linear infinite",
+      }} />
 
-                <Text
-                  mt={12}
-                  style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75 }}
-                  maw={520}
-                >
-                  Dev insights, AI trends, cloud updates, and product news —
-                  delivered straight to your inbox. No noise, just signal.
+      <Container size="xl" py={40}>
+        <motion.div
+          initial={{ opacity:0, y:22 }}
+          whileInView={{ opacity:1, y:0 }}
+          viewport={{ once:true }}
+          transition={{ duration:0.55 }}
+        >
+          <Grid gutter={{ base:28, md:36 }} align="flex-start">
+
+            {/* ── Brand ── */}
+            <Grid.Col span={{ base:12, sm:6, lg:4 }}>
+              <Stack gap={12}>
+                <Image src={logoSrc} w={170} />
+                <Text size="sm" lh={1.75} style={{ color:dimCol, maxWidth:300 }}>
+                  Our mission is to understand the unique challenges faced by our clients and deliver tailored solutions that drive efficiency, productivity, and growth.
                 </Text>
-              </Grid.Col>
-
-              <Grid.Col span={{ base: 12, md: 5 }}>
-                <Stack gap={12}>
-                  <TextInput
-                    radius="xl"
-                    size="lg"
-                    placeholder="your@email.com"
-                    styles={{
-                      input: {
-                        height: 54,
-                        background: "rgba(255,255,255,0.11)",
-                        border: "1.5px solid rgba(255,255,255,0.20)",
-                        color: "#fff",
-                        fontSize: 15,
-                      },
-                    }}
-                  />
-                  <Button
-                    radius="xl"
-                    size="lg"
-                    color="white"
-                    c="blue"
-                    fw={700}
-                    leftSection={<IconSend size={17} />}
-                  >
-                    Subscribe — it's free
-                  </Button>
-                  <Text
-                    size="xs"
-                    style={{ color: "rgba(255,255,255,0.55)" }}
-                    ta="center"
-                  >
-                    No spam. Unsubscribe anytime.
-                  </Text>
-                </Stack>
-              </Grid.Col>
-            </Grid>
-          </motion.div>
-        </Container>
-      </Box> */}
-
-      {/* ══════════════════════════════════════════
-          MAIN FOOTER BODY
-      ══════════════════════════════════════════ */}
-      <Container size="xl" py={80}>
-        {/* ── Stats row ── */}
-        {/* <motion.div {...fadeUp}>
-          <Grid gutter={20} mb={70}>
-            {stats.map(({ value, label }) => (
-              <Grid.Col key={label} span={{ base: 12, xs: 4 }}>
-                <Paper
-                  radius="xl"
-                  p="xl"
-                  style={{
-                    background: cardBg,
-                    border: cardBorder,
-                    textAlign: "center",
-                  }}
-                >
-                  <Title
-                    order={2}
-                    style={{
-                      background: "linear-gradient(135deg,#2563EB,#38BDF8)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      fontSize: 38,
-                      fontWeight: 900,
-                    }}
-                  >
-                    {value}
-                  </Title>
-                  <Text size="sm" c="dimmed" mt={4} fw={500}>
-                    {label}
-                  </Text>
-                </Paper>
-              </Grid.Col>
-            ))}
-          </Grid>
-        </motion.div> */}
-
-        {/* ── Main links grid ── */}
-        <motion.div {...fadeUp}>
-          <Grid gutter={{ base: 40, md: 60 }}>
-            {/* Brand column */}
-            <Grid.Col span={{ base: 12, sm: 6, lg: 4 }}>
-              <Stack gap={20}>
-                <Image src={logoSrc} w={200} />
-
-                <Text
-                  size="sm"
-                  lh={1.85}
-                  style={{ color: dimCol, maxWidth: 320 }}
-                >
-                  We craft enterprise software, AI-powered platforms, and
-                  end-to-end digital products that help modern businesses scale
-                  with confidence.
-                </Text>
-
-                {/* Social row */}
-                <Group gap={8} mt={4}>
-                  {socialLinks.map(({ Icon, href, label }) => (
+                <Group gap={8} mt={2}>
+                  {socialLinks.map(({ Icon, href, label, color }) => (
                     <ActionIcon
                       key={label}
                       component="a"
                       href={href}
                       aria-label={label}
-                      size={42}
+                      size={38}
                       radius="xl"
-                      variant="light"
-                      color="blue"
+                      className="f-social"
+                      style={{
+                        background:`${color}14`,
+                        border:`1px solid ${color}28`,
+                        color:color,
+                      }}
                     >
-                      <Icon size={19} />
+                      <Icon size={17} />
                     </ActionIcon>
                   ))}
                 </Group>
               </Stack>
             </Grid.Col>
 
-            {/* Quick Links */}
-            <Grid.Col span={{ base: 6, sm: 3, lg: 2 }}>
+            {/* ── Company ── */}
+            <Grid.Col span={{ base:6, sm:3, lg:2 }}>
               <Stack gap={0}>
-                <Text
-                  size="xs"
-                  fw={700}
-                  tt="uppercase"
-                  style={{ color: dimCol, letterSpacing: 1.6 }}
-                  mb={18}
-                >
+                <Text size="xs" fw={700} tt="uppercase"
+                  style={{ color:"#3B82F6", letterSpacing:2 }} mb={14}>
                   Company
                 </Text>
                 {quickLinks.map(({ label, link }) => (
-                  <Anchor
-                    key={label}
-                    component={Link}
-                    to={link}
-                    underline="never"
-                    style={{
-                      color: dimCol,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 4,
-                    }}
-                    mb={13}
-                    size="sm"
-                    className="footer-link"
-                  >
-                    <IconChevronRight
-                      size={13}
-                      style={{ opacity: 0.5, flexShrink: 0 }}
-                    />
+                  <Anchor key={label} component={Link} to={link}
+                    underline="never" size="sm" mb={10} className="f-link"
+                    style={{ color:dimCol, display:"flex", alignItems:"center", gap:4 }}>
+                    <IconChevronRight size={12} style={{ opacity:0.45, flexShrink:0 }} />
                     {label}
                   </Anchor>
                 ))}
               </Stack>
             </Grid.Col>
 
-            {/* Services */}
-            <Grid.Col span={{ base: 6, sm: 3, lg: 2 }}>
+            {/* ── Services ── */}
+            <Grid.Col span={{ base:6, sm:3, lg:2 }}>
               <Stack gap={0}>
-                <Text
-                  size="xs"
-                  fw={700}
-                  tt="uppercase"
-                  style={{ color: dimCol, letterSpacing: 1.6 }}
-                  mb={18}
-                >
+                <Text size="xs" fw={700} tt="uppercase"
+                  style={{ color:"#3B82F6", letterSpacing:2 }} mb={14}>
                   Services
                 </Text>
                 {services.map(({ label, link }) => (
-                  <Anchor
-                    key={label}
-                    component={Link}
-                    to={link}
-                    underline="never"
-                    style={{
-                      color: dimCol,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 4,
-                    }}
-                    mb={13}
-                    size="sm"
-                    className="footer-link"
-                  >
-                    <IconChevronRight
-                      size={13}
-                      style={{ opacity: 0.5, flexShrink: 0 }}
-                    />
+                  <Anchor key={label} component={Link} to={link}
+                    underline="never" size="sm" mb={10} className="f-link"
+                    style={{ color:dimCol, display:"flex", alignItems:"center", gap:4 }}>
+                    <IconChevronRight size={12} style={{ opacity:0.45, flexShrink:0 }} />
                     {label}
                   </Anchor>
                 ))}
               </Stack>
             </Grid.Col>
 
-            {/* Contact card */}
-            <Grid.Col span={{ base: 12, sm: 6, lg: 4 }}>
-              <Paper
-                radius="xl"
-                p="xl"
-                style={{ background: cardBg, border: cardBorder }}
-              >
-                <Text
-                  size="xs"
-                  fw={700}
-                  tt="uppercase"
-                  style={{ color: dimCol, letterSpacing: 1.6 }}
-                  mb={20}
-                >
+            {/* ── Contact card ── */}
+            <Grid.Col span={{ base:12, sm:6, lg:4 }}>
+              <Box style={{
+                background:cardBg, border:cardBorder,
+                borderRadius:20, padding:"22px 22px 18px",
+                position:"relative", overflow:"hidden",
+                boxShadow: isDark
+                  ? "0 10px 36px rgba(0,0,0,0.24)"
+                  : "0 10px 36px rgba(37,99,235,0.08)",
+              }}>
+                {/* top accent */}
+                <Box style={{
+                  position:"absolute", top:0, left:0, right:0, height:3,
+                  background:"linear-gradient(90deg,#2563EB,#8B5CF6,#38BDF8)",
+                }} />
+
+                <Text size="xs" fw={700} tt="uppercase"
+                  style={{ color:dimCol, letterSpacing:2 }} mb={16}>
                   Get in Touch
                 </Text>
 
-                <Stack gap={16}>
-                  {[
-                    { Icon: IconMapPin, text: "Pune, Maharashtra, India" },
-                    { Icon: IconPhone, text: "+91 8237525097" },
-                    { Icon: IconMail, text: "support@nexflaredynamics.com" },
-                  ].map(({ Icon, text }) => (
-                    <Group key={text} gap={12} wrap="nowrap" align="flex-start">
-                      <ThemeIcon
-                        color="blue"
-                        variant="light"
-                        radius="xl"
-                        size={36}
-                        style={{ flexShrink: 0 }}
-                      >
-                        <Icon size={17} />
-                      </ThemeIcon>
-                      <Text
-                        size="sm"
-                        style={{ color: dimCol, lineHeight: 1.6 }}
-                      >
+                <Stack gap={12}>
+                  {contacts.map(({ Icon, text, color }) => (
+                    <Group key={text} gap={10} wrap="nowrap" align="flex-start">
+                      <Box style={{
+                        width:32, height:32, borderRadius:9, flexShrink:0,
+                        background:`${color}14`,
+                        display:"flex", alignItems:"center", justifyContent:"center",
+                      }}>
+                        <Icon size={15} color={color} />
+                      </Box>
+                      <Text size="sm" style={{ color:dimCol, lineHeight:1.55, paddingTop:5 }}>
                         {text}
                       </Text>
                     </Group>
                   ))}
                 </Stack>
 
-                <Button
-                  mt={24}
-                  radius="xl"
-                  size="md"
-                  fullWidth
-                  variant="gradient"
-                  gradient={{ from: "blue", to: "cyan" }}
-                  rightSection={<IconSend size={16} />}
-                  fw={600}
-                >
+                <Button mt={18} radius="xl" size="sm" fullWidth
+                  variant="gradient" gradient={{ from:"blue", to:"cyan" }}
+                  rightSection={<IconSend size={14} />}
+                  fw={600} style={{ height:40 }} className="f-btn">
                   Request a Free Quote
                 </Button>
-              </Paper>
+              </Box>
             </Grid.Col>
+
           </Grid>
         </motion.div>
 
-        {/* ── CTA banner ── */}
-        {/* <motion.div
-          {...{ ...fadeUp, transition: { ...fadeUp.transition, delay: 0.1 } }}
-        >
-          <Paper
-            mt={70}
-            radius="2rem"
-            p={{ base: 28, md: 40 }}
-            style={{
-              background: isDark ? "rgba(255,255,255,0.04)" : "#ffffff",
-              border: cardBorder,
-              boxShadow: isDark
-                ? "0 20px 50px rgba(0,0,0,0.30)"
-                : "0 12px 40px rgba(37,99,235,0.09)",
-            }}
-          >
-            <Grid align="center" gutter={20}>
-              <Grid.Col span={{ base: 12, md: 8 }}>
-                <Badge variant="light" color="blue" radius="xl" mb={12}>
-                  Let's build together
-                </Badge>
-                <Title
-                  order={2}
-                  style={{ color: textCol, fontWeight: 800, lineHeight: 1.3 }}
-                >
-                  Have an idea? Let's make it real.
-                </Title>
-                <Text mt={8} c="dimmed" size="sm" maw={480}>
-                  From MVP to enterprise scale — Nexflare Dynamics turns your
-                  vision into a product your users will love.
-                </Text>
-              </Grid.Col>
-              <Grid.Col span={{ base: 12, md: 4 }}>
-                <Group
-                  justify={{ base: "flex-start", md: "flex-end" }}
-                  mt={{ base: 16, md: 0 }}
-                >
-                  <Button
-                    radius="xl"
-                    size="lg"
-                    variant="gradient"
-                    gradient={{ from: "blue", to: "cyan" }}
-                    rightSection={<IconSend size={17} />}
-                    fw={700}
-                    component={Link}
-                    to="/contact"
-                  >
-                    Start a Project
-                  </Button>
-                </Group>
-              </Grid.Col>
-            </Grid>
-          </Paper>
-        </motion.div> */}
-
-        {/* ── Bottom bar ── */}
-        <Divider
-          mt={60}
-          mb={32}
-          color={isDark ? "rgba(255,255,255,0.07)" : "#E2E8F0"}
-        />
+        {/* bottom bar */}
+        <Divider mt={32} mb={18} color={isDark ? "rgba(255,255,255,0.07)" : "#E2E8F0"} />
 
         <motion.div
-          {...{ ...fadeUp, transition: { ...fadeUp.transition, delay: 0.15 } }}
+          initial={{ opacity:0 }}
+          whileInView={{ opacity:1 }}
+          viewport={{ once:true }}
+          transition={{ duration:0.4, delay:0.1 }}
         >
-          <Group justify="space-between" align="center" wrap="wrap" gap={20}>
-            <Stack gap={6}>
-              <Text size="sm" style={{ color: dimCol }}>
-                © {new Date().getFullYear()} Nexflare Dynamics. All rights
-                reserved.
+          <Group justify="space-between" align="center" wrap="wrap" gap={10}>
+            <Stack gap={3}>
+              <Text size="xs" style={{ color:dimCol }}>
+                © {new Date().getFullYear()} Nexflare Dynamics. All rights reserved.
               </Text>
-              <Group gap={16}>
+              <Group gap={12}>
                 {[
-                  { label: "Privacy Policy", to: "/privacy-policy" },
-                  { label: "Terms of Service", to: "/terms" },
-                  { label: "Cookie Policy", to: "/cookies" },
+                  { label:"Privacy Policy",   to:"/privacy-policy" },
+                  { label:"Terms of Service", to:"/terms" },
+                  { label:"Cookie Policy",    to:"/cookies" },
                 ].map(({ label, to }) => (
-                  <Anchor
-                    key={label}
-                    component={Link}
-                    to={to}
-                    underline="never"
-                    size="xs"
-                    style={{ color: dimCol }}
-                    className="footer-link"
-                  >
+                  <Anchor key={label} component={Link} to={to}
+                    underline="never" size="xs"
+                    style={{ color:dimCol }} className="f-link">
                     {label}
                   </Anchor>
                 ))}
               </Group>
             </Stack>
 
-            <Group gap={16} align="center">
-              <Text size="sm" style={{ color: dimCol }}>
-                Made with ❤️ in India
-              </Text>
-
-              <ActionIcon
-                radius="xl"
-                size={48}
-                variant="gradient"
-                gradient={{ from: "blue", to: "cyan" }}
-                aria-label="Back to top"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                <IconArrowUp size={20} />
+            <Group gap={10} align="center">
+              <Text size="xs" style={{ color:dimCol }}>Made with ❤️ in India</Text>
+              <ActionIcon radius="xl" size={40} variant="gradient"
+                gradient={{ from:"blue", to:"cyan" }}
+                aria-label="Back to top" className="f-social"
+                onClick={() => window.scrollTo({ top:0, behavior:"smooth" })}>
+                <IconArrowUp size={17} />
               </ActionIcon>
             </Group>
           </Group>
         </motion.div>
       </Container>
 
-      {/* ── Scoped styles ── */}
       <style>{`
-        .footer-link {
-          transition: color 0.22s ease, transform 0.22s ease;
-          display: inline-flex;
-          align-items: center;
+        @keyframes shimmer {
+          0%   { background-position: 0% 0; }
+          100% { background-position: 200% 0; }
         }
-        .footer-link:hover {
+        .f-link {
+          transition: color .2s ease, transform .2s ease;
+        }
+        .f-link:hover {
           color: #2563EB !important;
-          transform: translateX(3px);
+          transform: translateX(4px);
         }
-        .mantine-ActionIcon-root {
-          transition: transform 0.28s ease, box-shadow 0.28s ease;
+        .f-social {
+          transition: transform .22s ease, box-shadow .22s ease !important;
         }
-        .mantine-ActionIcon-root:hover {
-          transform: translateY(-4px) scale(1.08);
-          box-shadow: 0 8px 24px rgba(37,99,235,0.30);
+        .f-social:hover {
+          transform: translateY(-4px) scale(1.12) !important;
+          box-shadow: 0 8px 20px rgba(37,99,235,0.26) !important;
         }
-        .mantine-Button-root {
-          transition: transform 0.28s ease, box-shadow 0.28s ease;
+        .f-btn {
+          transition: transform .22s ease, box-shadow .22s ease !important;
         }
-        .mantine-Button-root:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 28px rgba(37,99,235,0.28);
-        }
-        .mantine-TextInput-input::placeholder {
-          color: rgba(255,255,255,0.55);
+        .f-btn:hover {
+          transform: translateY(-2px) !important;
+          box-shadow: 0 8px 24px rgba(37,99,235,0.28) !important;
         }
         @media (max-width: 768px) {
-          .mantine-Button-root { width: 100%; }
+          .f-btn { width: 100%; }
         }
       `}</style>
     </Box>

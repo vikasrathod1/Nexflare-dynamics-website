@@ -1,0 +1,146 @@
+import React from "react";
+import {
+  Box,
+  Container,
+  Paper,
+  Text,
+  Title,
+  Button,
+  Group,
+  useComputedColorScheme,
+} from "@mantine/core";
+import { IconArrowRight } from "@tabler/icons-react";
+
+const ReadyToStart = () => {
+  const colorScheme = useComputedColorScheme("light");
+  const isDark = colorScheme === "dark";
+
+  const textPrimary = isDark ? "#f8fafc" : "#0f172a";
+  const textSecondary = isDark ? "rgba(203,213,225,.65)" : "rgba(71,85,105,.85)";
+  const cardBg = isDark ? "#080b12" : "#ffffff";
+  const cardBorder = isDark ? "rgba(45,212,191,.35)" : "rgba(20,184,166,.35)";
+  const cardShadow = isDark
+    ? "0 0 0 1px rgba(45,212,191,.08), 0 0 60px rgba(45,212,191,.12), 0 20px 60px rgba(0,0,0,.5)"
+    : "0 0 0 1px rgba(20,184,166,.06), 0 0 50px rgba(20,184,166,.1), 0 20px 50px rgba(15,23,42,.08)";
+
+  return (
+    <Box py={80}>
+      <Container size="lg">
+        <Paper
+          radius="xl"
+          p={0}
+          style={{
+            position: "relative",
+            overflow: "hidden",
+            background: cardBg,
+            border: `1px solid ${cardBorder}`,
+            boxShadow: cardShadow,
+          }}
+        >
+          {/* ambient glow blobs */}
+          <Box
+            style={{
+              position: "absolute",
+              top: "30%",
+              left: "5%",
+              width: 260,
+              height: 220,
+              background: isDark ? "rgba(217,119,6,.18)" : "rgba(217,119,6,.1)",
+              filter: "blur(70px)",
+              borderRadius: "50%",
+              pointerEvents: "none",
+            }}
+          />
+          <Box
+            style={{
+              position: "absolute",
+              bottom: "-10%",
+              right: "10%",
+              width: 300,
+              height: 260,
+              background: isDark ? "rgba(45,212,191,.14)" : "rgba(20,184,166,.1)",
+              filter: "blur(80px)",
+              borderRadius: "50%",
+              pointerEvents: "none",
+            }}
+          />
+
+          <Box
+            ta="center"
+            py={{ base: 56, sm: 72 }}
+            px={{ base: 24, sm: 40 }}
+            style={{ position: "relative", zIndex: 1 }}
+          >
+            <Text
+              size="xs"
+              fw={700}
+              mb={16}
+              style={{
+                letterSpacing: 1.5,
+                color: isDark ? "#2dd4bf" : "#0d9488",
+                textTransform: "uppercase",
+              }}
+            >
+              Let's Build Together
+            </Text>
+
+            <Title
+              order={2}
+              style={{
+                fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif",
+                fontSize: "44px",
+                fontWeight: 700,
+                lineHeight: 1.25,
+                color: textPrimary,
+              }}
+            >
+              Ready to Start
+              <br />
+              Your Project?
+            </Title>
+
+            <Text size="sm" mt="md" mx="auto" maw={440} style={{ color: textSecondary, lineHeight: 1.7 }}>
+              From intuitive platforms to seamless integrations, we create
+              tools that enhance your digital footprint and accelerate
+              business success.
+            </Text>
+
+            <Group justify="center" gap="md" mt={36}>
+              <Button
+                size="md"
+                radius="xl"
+                rightSection={<IconArrowRight size={16} />}
+                component="a"
+                href="tel:+918237525097"
+                style={{
+                  background: "linear-gradient(135deg, #2dd4bf, #14b8a6)",
+                  color: "#062421",
+                  fontWeight: 700,
+                }}
+              >
+                Call Us Now
+              </Button>
+
+              <Button
+                size="md"
+                radius="xl"
+                variant="outline"
+                component="a"
+                href="mailto:hello@nexflaredynamics.com"
+                style={{
+                  borderColor: isDark ? "rgba(148,163,184,.4)" : "rgba(100,116,139,.4)",
+                  color: textPrimary,
+                  fontWeight: 600,
+                }}
+              >
+                Email Us
+              </Button>
+            </Group>
+          </Box>
+        </Paper>
+      </Container>
+    </Box>
+  );
+};
+
+export default ReadyToStart;
