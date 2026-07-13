@@ -133,6 +133,10 @@ const navLinks = [
             label: "Maintenance & Support",
             path: "/services/custom-software-development/maintenance-support",
           },
+           {
+            label: "CRM service",
+            path: "/services/custom-software-development/crm-service",
+          },
         ],
       },
       {
@@ -161,32 +165,7 @@ const navLinks = [
           },
         ],
       },
-      {
-        label: "CRM Service",
-        path: "/services/crm-service",
-        children: [
-          {
-            label: "CRM Setup & Integration",
-            path: "/services/crm-service/crm-setup",
-          },
-          {
-            label: "CRM Automation",
-            path: "/services/crm-service/crm-automation",
-          },
-          {
-            label: "CRM Training",
-            path: "/services/crm-service/crm-training",
-          },
-          {
-            label: "Lead Management",
-            path: "/services/crm-service/lead-management",
-          },
-          {
-            label: "CRM Support",
-            path: "/services/crm-service/crm-support",
-          },
-        ],
-      },
+     
       {
         label: "Web Dev & Design",
         path: "/services/website-development-design",
