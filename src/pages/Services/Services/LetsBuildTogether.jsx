@@ -141,7 +141,7 @@ const LetsBuildTogether = () => {
                   border: `1px solid ${
                     isDark ? "rgba(255,255,255,0.25)" : "rgba(15,23,42,0.25)"
                   }`,
-                  color: headingColor,
+                  // color: headingColor,
                   fontWeight: 600,
                   fontSize: 14,
                   background: "transparent",
