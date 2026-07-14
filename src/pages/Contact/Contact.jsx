@@ -38,8 +38,8 @@ const Contact = () => {
             `,
       }}
     >
-      <ContactHero />
       <ContactFormScreen />
+      <ContactHero />
       <OfficeLocation />
       <SocialConnect />
       <ReadyToStart />

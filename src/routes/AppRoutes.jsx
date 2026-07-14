@@ -156,7 +156,7 @@ const AppRoutes = () => {
           element={<WebsiteDevelopment />}
         />
         <Route
-          path="//services/website-development-design/app-development"
+          path="/services/website-development-design/app-development"
           element={<AppDevelopment />}
         />
         <Route

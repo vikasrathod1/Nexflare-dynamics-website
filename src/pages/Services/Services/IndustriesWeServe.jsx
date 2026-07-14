@@ -62,7 +62,7 @@ const IndustriesWeServe = () => {
         <Group justify="space-between" align="flex-start" mb={48} wrap="wrap" gap="xl">
           <Box maw={520}>
             <Group gap={8} mb={12}>
-              <Box w={24} h={2} style={{ background: accent }} />
+              {/* <Box w={24} h={2} style={{ background: accent }} /> */}
               <Text
                 fw={700}
                 size="xs"
