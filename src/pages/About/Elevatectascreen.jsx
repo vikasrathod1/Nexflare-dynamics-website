@@ -133,11 +133,20 @@ const ElevateCTAScreen = () => {
                 component="button"
                 type="button"
                 onClick={() =>
-                  window.open(
-                    "https://mail.google.com/mail/?view=cm&fs=1&to=enquiry@nexflaredynamics.com&su=Project%20Inquiry&body=Hello%20Nexflare%20Dynamics,%0A%0AI%20would%20like%20to%20discuss%20my%20project.%0A%0ARegards,",
-                    "_blank",
-                    "noopener,noreferrer",
-                  )
+                 window.open(
+                  "https://mail.google.com/mail/?view=cm&fs=1" +
+                    "&to=enquiry@nexflaredynamics.com" +
+                    "&su=Project%20Inquiry%20%E2%80%93%20Request%20for%20Consultation" +
+                    "&body=Hello%20Nexflare%20Dynamics%20Team,%0A%0A" +
+                    "I%20hope%20you%20are%20doing%20well.%0A%0A" +
+                    "I%20am%20interested%20in%20discussing%20a%20project%20and%20would%20like%20to%20learn%20more%20about%20your%20services.%20I%20would%20appreciate%20the%20opportunity%20to%20connect%20with%20your%20team%20to%20discuss%20my%20requirements,%20project%20scope,%20and%20possible%20next%20steps.%0A%0A" +
+                    "Please%20let%20me%20know%20a%20convenient%20time%20to%20schedule%20a%20discussion.%0A%0A" +
+                    "Thank%20you%20for%20your%20time.%20I%20look%20forward%20to%20hearing%20from%20you.%0A%0A" +
+                    "Best%20Regards,%0A" +
+                    "%5BYour%20Name%5D",
+                  "_blank",
+                  "noopener,noreferrer",
+                )
                 }
                 style={{
                   display: "inline-flex",

@@ -1030,7 +1030,7 @@ const GetInTouchScreen = () => {
         >
           {/* Left column */}
           <Stack gap={0}>
-            <Box
+            {/* <Box
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -1064,7 +1064,7 @@ const GetInTouchScreen = () => {
               >
                 Get In Touch
               </Text>
-            </Box>
+            </Box> */}
 
             <Title
               order={2}

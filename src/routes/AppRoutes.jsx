@@ -71,6 +71,7 @@ import WebsiteDevelopment from "../pages/Services/WebsiteDevelopment/WebsiteDeve
 import AppDevelopment from "../pages/Services/WebsiteDevelopment/AppDevelopment";
 import EcommerceDevelopment from "../pages/Services/WebsiteDevelopment/EcommerceDevelopment";
 import LandingPage from "../pages/Services/WebsiteDevelopment/LandingPage";
+import TermsConditions from "../pages/TermsConditions/TermsConditions";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -89,6 +90,7 @@ const AppRoutes = () => {
         {/* <Route path="/careers" element={<Careers />} /> */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
