@@ -77,7 +77,7 @@ const ProductHero = () => {
                   size="lg"
                   radius="xl"
                   variant="light"
-                  color="blue"
+                  color="#06b6d4"
                   leftSection={<IconApps size={14} />}
                 >
                   Software Products

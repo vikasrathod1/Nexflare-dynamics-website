@@ -119,7 +119,7 @@ const ContactFormScreen = () => {
   };
 
   return (
-    <Box component="section" py={{ base: 56, md: 88 }}>
+    <Box component="section" pt={130}>
       <Container size="lg">
         <SimpleGrid
           cols={{ base: 1, lg: 2 }}

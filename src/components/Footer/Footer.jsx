@@ -60,7 +60,7 @@ const socialLinks = [
 ];
 
 const contacts = [
-  { Icon:IconMapPin, text:"GLOBAL BUSINESS HUB, EON Free Zone, Kharadi, Pune, Maharashtra 411014",      color:"#3B82F6" },
+  { Icon:IconMapPin, text:"Global Business Hub, EON Free Zone, Kharadi, Pune, Maharashtra 411014",      color:"#3B82F6" },
   { Icon:IconPhone,  text:"+91-8237525097",                color:"#10B981" },
   { Icon:IconMail,   text:"enquiry@nexflaredynamics.com",  color:"#8B5CF6" },
 ];

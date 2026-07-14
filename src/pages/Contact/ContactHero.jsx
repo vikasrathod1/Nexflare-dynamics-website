@@ -963,8 +963,16 @@
 
 // export default ContactHero;
 
-
-import { Box, Container, Text, Title, Stack, Group, SimpleGrid, useComputedColorScheme } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Text,
+  Title,
+  Stack,
+  Group,
+  SimpleGrid,
+  useComputedColorScheme,
+} from "@mantine/core";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const aqua = "aqua";
@@ -984,7 +992,10 @@ const contactCards = [
   {
     icon: MapPin,
     label: "Office Address",
-    lines: ["GLOBAL BUSINESS HUB, EON Free Zone,", "Kharadi, Pune, Maharashtra 411014"],
+    lines: [
+      "Global Business Hub, EON Free Zone,",
+      "Kharadi, Pune, Maharashtra 411014",
+    ],
     bold: true,
   },
 ];
@@ -1005,15 +1016,21 @@ const GetInTouchScreen = () => {
   const cardBorder = isDark ? "rgba(255,255,255,0.08)" : "rgba(15,23,42,0.08)";
   const iconBg = isDark ? "rgba(6,182,212,0.14)" : "rgba(6,182,212,0.1)";
   const labelColor = isDark ? "rgba(226,232,240,0.45)" : "rgba(15,23,42,0.5)";
-  const statLabelColor = isDark ? "rgba(226,232,240,0.55)" : "rgba(15,23,42,0.55)";
+  const statLabelColor = isDark
+    ? "rgba(226,232,240,0.55)"
+    : "rgba(15,23,42,0.55)";
 
   return (
-    <Box component="section" py={{ base: 56, md: 88 }}>
+    <Box component="section" pt={40}>
       <Container size="lg">
-        <SimpleGrid cols={{ base: 1, md: 2 }} spacing={{ base: 40, md: 60 }} py={60}>
+        <SimpleGrid
+          cols={{ base: 1, md: 2 }}
+          spacing={{ base: 40, md: 60 }}
+          py={60}
+        >
           {/* Left column */}
           <Stack gap={0}>
-            <Box   
+            <Box
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -1022,12 +1039,29 @@ const GetInTouchScreen = () => {
                 padding: "8px 16px",
                 borderRadius: 999,
                 border: `1px solid ${teal}55`,
-                background: isDark ? "rgba(6,182,212,0.08)" : "rgba(6,182,212,0.06)",
+                background: isDark
+                  ? "rgba(6,182,212,0.08)"
+                  : "rgba(6,182,212,0.06)",
                 marginBottom: 22,
               }}
             >
-              <Box style={{ width: 6, height: 6, borderRadius: 999, background: teal }} />
-              <Text fw={700} size="xs" style={{ color: teal, letterSpacing: 1, textTransform: "uppercase" }}>
+              <Box
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: 999,
+                  background: teal,
+                }}
+              />
+              <Text
+                fw={700}
+                size="xs"
+                style={{
+                  color: teal,
+                  letterSpacing: 1,
+                  textTransform: "uppercase",
+                }}
+              >
                 Get In Touch
               </Text>
             </Box>
@@ -1047,7 +1081,12 @@ const GetInTouchScreen = () => {
               <span style={{ color: teal }}>Vision</span> Together
             </Title>
 
-            <Text mt={22} size="md" maw={440} style={{ color: bodyColor, lineHeight: 1.75 }}>
+            <Text
+              mt={22}
+              size="md"
+              maw={440}
+              style={{ color: bodyColor, lineHeight: 1.75 }}
+            >
               At Nexflare Dynamics, we value communication and collaboration.
               Reach out for project discussions, service enquiries, or expert
               consultations — our team is ready to assist at every step.
@@ -1066,7 +1105,10 @@ const GetInTouchScreen = () => {
                     }}
                   >
                     {value}
-                    <Text component="span" style={{ color: teal, fontSize: 16, fontWeight: 700 }}>
+                    <Text
+                      component="span"
+                      style={{ color: teal, fontSize: 16, fontWeight: 700 }}
+                    >
                       {suffix}
                     </Text>
                   </Text>
@@ -1112,7 +1154,11 @@ const GetInTouchScreen = () => {
                   <Text
                     fw={600}
                     size="xs"
-                    style={{ color: labelColor, letterSpacing: 1, textTransform: "uppercase" }}
+                    style={{
+                      color: labelColor,
+                      letterSpacing: 1,
+                      textTransform: "uppercase",
+                    }}
                   >
                     {label}
                   </Text>
@@ -1142,10 +1188,19 @@ const GetInTouchScreen = () => {
                 padding: "8px 18px",
                 borderRadius: 999,
                 border: `1px solid ${teal}55`,
-                background: isDark ? "rgba(6,182,212,0.08)" : "rgba(6,182,212,0.06)",
+                background: isDark
+                  ? "rgba(6,182,212,0.08)"
+                  : "rgba(6,182,212,0.06)",
               }}
             >
-              <Box style={{ width: 6, height: 6, borderRadius: 999, background: teal }} />
+              <Box
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: 999,
+                  background: teal,
+                }}
+              />
               <Text size="xs" fw={600} style={{ color: teal }}>
                 We're open Mon–Sat · 9 AM – 7 PM IST
               </Text>

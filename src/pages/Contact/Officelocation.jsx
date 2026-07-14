@@ -46,11 +46,11 @@ const OfficeLocation = () => {
           <Grid.Col span={{ base: 12, md: 5 }}>
             <Stack justify="center" h="100%" gap="sm">
               <Group gap={8}>
-                <Box style={{ width: 18, height: 1, background: "#6366f1" }} />
+                {/* <Box style={{ width: 18, height: 1, background: "#6366f1" }} /> */}
                 <Text
                   size="xs"
                   fw={700}
-                  style={{ letterSpacing: 1.5, color: "#6366f1", textTransform: "uppercase" }}
+                  style={{ letterSpacing: 1.5, color: "#06b6d4", textTransform: "uppercase" }}
                 >
                   Our Office
                 </Text>

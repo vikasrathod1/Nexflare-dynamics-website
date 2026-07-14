@@ -180,7 +180,7 @@ const SECTIONS = [
         </p>
         <div className="contact-card">
           <p className="company">Nexflare Dynamics Pvt. Ltd.</p>
-          <p className="addr"><b>GLOBAL BUSINESS HUB</b>, EON Free Zone,<br />Kharadi, Pune, Maharashtra 411014, India</p>
+          <p className="addr"><b>Global Business Hub</b>, EON Free Zone,<br />Kharadi, Pune, Maharashtra 411014, India</p>
           <p>✉️ <a className="inline-link" href="mailto:enquiry@nexflaredynamics.com">enquiry@nexflaredynamics.com</a></p>
           <p>📞 +91-8237525097</p>
         </div>
