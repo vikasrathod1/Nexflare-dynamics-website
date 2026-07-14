@@ -68,7 +68,7 @@ const ConnectOurTeam = () => {
       <Container size="lg">
         <Box maw={560} mb={48}>
           <Group gap={8} mb={12}>
-            <Box w={24} h={2} style={{ background: accent }} />
+            {/* <Box w={24} h={2} style={{ background: accent }} /> */}
             <Text
               fw={700}
               size="xs"

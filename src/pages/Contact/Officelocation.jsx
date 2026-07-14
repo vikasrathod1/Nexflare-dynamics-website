@@ -78,7 +78,7 @@ const OfficeLocation = () => {
           </Grid.Col>
 
           {/* RIGHT — info cards */}
-          <Grid.Col span={{ base: 12, md: 7 }}>
+          {/* <Grid.Col span={{ base: 12, md: 7 }}>
             <Stack gap="md" justify="center" h="100%">
               <Paper
                 radius="lg"
@@ -156,7 +156,7 @@ const OfficeLocation = () => {
                 </Group>
               </Paper>
             </Stack>
-          </Grid.Col>
+          </Grid.Col> */}
         </Grid>
 
         {/* MAP */}

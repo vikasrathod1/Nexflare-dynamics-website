@@ -166,7 +166,6 @@
 
 // export default ServicesOverview;
 
-
 import {
   Box,
   Button,
@@ -198,6 +197,7 @@ const services = [
   {
     // number: "01",
     title: "Dev Ops",
+    id: "devops",
     description:
       "CI/CD pipelines, infrastructure as code, automated monitoring. Seamless deployments with enterprise-grade reliability.",
     icon: IconCloud,
@@ -205,7 +205,8 @@ const services = [
   },
   {
     // number: "02",
-    title: "Software Outsourcing",  
+    title: "Software Outsourcing",
+    id: "software-outsourcing",
     description:
       "End-to-end development using a global talent pool. High quality, cost-effective, and fully managed from discovery to launch.",
     icon: IconDeviceMobile,
@@ -214,6 +215,7 @@ const services = [
   {
     // number: "03",
     title: "Project & Resource Consulting",
+    id: "consulting",
     description:
       "Expert guidance, team augmentation, and strategic technology advisory for optimal project outcomes at every scale.",
     icon: IconCloud,
@@ -222,6 +224,7 @@ const services = [
   {
     // number: "04",
     title: "Custom Software Development",
+    id: "custom-software",
     description:
       "Tailored web, mobile, and enterprise products built with agile methodology — aligned perfectly to your unique business goals.",
     // icon: IconBrain,
@@ -240,12 +243,7 @@ const ServicesOverview = () => {
       <Grid mb={70} align="center">
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Stack gap="md">
-            <Text
-              fw={700}
-              c="blue"
-              tt="uppercase"
-              size="sm"
-            >
+            <Text fw={700} c="blue" tt="uppercase" size="sm">
               OUR CORE SERVICES
             </Text>
 
@@ -267,15 +265,10 @@ const ServicesOverview = () => {
 
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Stack gap="xl">
-            <Text
-              size="lg"
-              c="dimmed"
-              lh={1.9}
-            >
+            <Text size="lg" c="dimmed" lh={1.9}>
               We deliver end-to-end digital solutions that help startups,
-              enterprises, and growing businesses accelerate innovation,
-              improve operational efficiency, and build future-ready software
-              products.
+              enterprises, and growing businesses accelerate innovation, improve
+              operational efficiency, and build future-ready software products.
             </Text>
 
             <Button
@@ -296,10 +289,7 @@ const ServicesOverview = () => {
 
       <Grid gutter={0}>
         {services.map((service, index) => (
-          <Grid.Col
-            key={service.number}
-            span={{ base: 12, sm: 6, lg: 3 }}
-          >
+          <Grid.Col key={service.number} span={{ base: 12, sm: 6, lg: 3 }}>
             <MotionCard
               withBorder
               radius={0}
@@ -324,55 +314,28 @@ const ServicesOverview = () => {
                 once: true,
               }}
               style={{
-                background:
-                  scheme === "dark"
-                    ? "#0f172a"
-                    : "#ffffff",
+                background: scheme === "dark" ? "#0f172a" : "#ffffff",
 
-                borderColor:
-                  scheme === "dark"
-                    ? "#1e293b"
-                    : "#e5e7eb",
+                borderColor: scheme === "dark" ? "#1e293b" : "#e5e7eb",
 
                 cursor: "pointer",
 
                 transition: ".3s",
               }}
             >
-              <Stack
-                justify="space-between"
-                h="100%"
-              >
+              <Stack justify="space-between" h="100%">
                 <Stack gap="lg">
-                  <Text
-                    size="xs"
-                    fw={700}
-                    c="dimmed"
-                  >
+                  <Text size="xs" fw={700} c="dimmed">
                     {service.number}
                   </Text>
 
-                  <ThemeIcon
-                    size={70}
-                    radius="xl"
-                    variant="light"
-                    color="blue"
-                  >
-                    <service.icon
-                      size={34}
-                      color={service.color}
-                    />
+                  <ThemeIcon size={70} radius="xl" variant="light" color="blue">
+                    <service.icon size={34} color={service.color} />
                   </ThemeIcon>
 
-                  <Title order={3}>
-                    {service.title}
-                  </Title>
+                  <Title order={3}>{service.title}</Title>
 
-                  <Text
-                    c="dimmed"
-                    size="sm"
-                    lh={1.8}
-                  >
+                  <Text c="dimmed" size="sm" lh={1.8}>
                     {service.description}
                   </Text>
                 </Stack>
@@ -382,9 +345,17 @@ const ServicesOverview = () => {
                   p={0}
                   justify="start"
                   color="blue"
-                  rightSection={
-                    <IconArrowRight size={16} />
-                  }
+                  rightSection={<IconArrowRight size={16} />}
+                  onClick={() => {
+                    const element = document.getElementById(service.id);
+
+                    if (element) {
+                      element.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }
+                  }}
                 >
                   Explore
                 </Button>

@@ -11,8 +11,6 @@ import ConnectOurTeam from "./ConnectOurTeam";
 import ClientReviews from "./ClientReviews";
 import LetsBuildTogether from "./LetsBuildTogether";
 
-
-
 const Services = () => {
   const computedColorScheme = useComputedColorScheme("light");
 
@@ -37,10 +35,25 @@ const Services = () => {
     >
       <ServicesHero />
       <ServicesOverview />
-      <Devops />
+      {/* <Devops />
       <CustomSoftwareDevelopment />
       <SoftwareOutsourcing />
-      <Projectresourceconsulting />
+      <Projectresourceconsulting /> */}
+      <section id="devops">
+        <Devops />
+      </section>
+
+      <section id="software-outsourcing">
+        <SoftwareOutsourcing />
+      </section>
+
+      <section id="consulting">
+        <Projectresourceconsulting />
+      </section>
+
+      <section id="custom-software">
+        <CustomSoftwareDevelopment />
+      </section>
       <HowWeWork />
       <IndustriesWeServe />
       <ConnectOurTeam />

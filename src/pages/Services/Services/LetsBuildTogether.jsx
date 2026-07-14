@@ -67,7 +67,7 @@ const LetsBuildTogether = () => {
       <Container size="md" style={{ position: "relative", zIndex: 1 }}>
         <Stack align="center" gap={0}>
           <Group gap={8} mb={20}>
-            <Box w={24} h={2} style={{ background: accent }} />
+            {/* <Box w={24} h={2} style={{ background: accent }} /> */}
             <Text
               fw={700}
               size="xs"

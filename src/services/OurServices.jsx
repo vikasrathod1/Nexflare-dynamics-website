@@ -85,7 +85,6 @@
 //     color: "#10B981",
 //     badge: "Cloud",
 //   },
-  
 
 // ];
 
@@ -505,6 +504,7 @@ import {
   IconCode,
   IconArrowRight,
 } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 
 const SERVICES = [
   {
@@ -579,13 +579,13 @@ const CSS = `
     margin-bottom: 14px;
     text-transform: uppercase;
   }
-  .svc-eyebrow::before{
-    content: "";
-    width: 22px;
-    height: 1.5px;
-    background: var(--accent);
-    display: inline-block;
-  }
+  // .svc-eyebrow::before{
+  //   content: "";
+  //   width: 22px;
+  //   height: 1.5px;
+  //   background: var(--accent);
+  //   display: inline-block;
+  // }
 
   .svc-heading{
     font-size: 38px;
@@ -707,7 +707,7 @@ const CSS = `
 `;
 
 const THEME_VARS = {
-   dark: {
+  dark: {
     "--bg": "#060d18",
     "--bg-elevated": "#0d1730",
     "--border": "#1e2b45",
@@ -782,13 +782,13 @@ export default function OurServices() {
 
           <div className="svc-right">
             <p className="svc-desc">
-              Dedicated to delivering excellence through advanced technologies and
-              expert craftsmanship, ensuring every solution drives real business
-              value.
+              Dedicated to delivering excellence through advanced technologies
+              and expert craftsmanship, ensuring every solution drives real
+              business value.
             </p>
-            <a href="#" className="svc-view-all">
+            <Link to="/services" className="svc-view-all">
               View All Services <IconArrowRight />
-            </a>
+            </Link>
           </div>
         </div>
 
