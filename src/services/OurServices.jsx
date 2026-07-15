@@ -517,7 +517,7 @@ const SERVICES = [
       "Streamline your software lifecycle by integrating development and operations. We leverage CI/CD pipelines, infrastructure as code, and automated monitoring for seamless deployments, scalability, and reliability.",
   },
   {
-    id: "outsourcing",
+    id: "software-outsourcing",
     // number: "02",
     category: "Outsourcing",
     icon: IconWorld,
@@ -535,7 +535,7 @@ const SERVICES = [
       "Expert guidance and skilled professionals tailored to your needs. We specialize in resource planning, project management, and team augmentation to ensure efficient execution and optimal outcomes.",
   },
   {
-    id: "development",
+    id: "custom-software",
     // number: "04",
     category: "Development",
     icon: IconCode,
@@ -808,13 +808,13 @@ export default function OurServices() {
                 {/* <a href="#" className="svc-learn-more">
                   Learn more <IconArrowRight />
                 </a> */}
-                <Link to="/services#devops" className="svc-learn-more">
-                  Learn more <IconArrowRight />
-                </Link>
-
-                {/* <Link to={`/services#${s.id}`} className="svc-learn-more">
+                {/* <Link to="/services#devops" className="svc-learn-more">
                   Learn more <IconArrowRight />
                 </Link> */}
+
+               <Link to={`/services#${s.id}`} className="svc-learn-more">
+  Learn more <IconArrowRight />
+</Link>
                 
               </div>
             );
