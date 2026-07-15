@@ -1,25 +1,3 @@
-// import AboutCompany from "./AboutCompany";
-// import AboutHero from "./AboutHero";
-// import MeetOurTeam from "./MeetOurTeam";
-// import MissionVision from "./MissionVision";
-// import OurServicesOverview from "./OurServicesOverview";
-// import WhyChooseUs from "./WhyChooseUs";
-
-// const About = () => {
-//   return (
-//     <>
-//       <AboutHero />
-//        <AboutCompany />
-//        <MissionVision/>
-//        <WhyChooseUs/>
-//        <OurServicesOverview />
-//        <MeetOurTeam />
-//     </>
-//   );
-// };
-
-// export default About;
-
 import { Box, useComputedColorScheme } from "@mantine/core";
 
 import AboutHero from "./AboutHero";
