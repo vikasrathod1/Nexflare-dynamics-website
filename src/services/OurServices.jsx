@@ -812,10 +812,9 @@ export default function OurServices() {
                   Learn more <IconArrowRight />
                 </Link> */}
 
-               <Link to={`/services#${s.id}`} className="svc-learn-more">
-  Learn more <IconArrowRight />
-</Link>
-                
+                <Link to={`/services#${s.id}`} className="svc-learn-more">
+                  Learn more <IconArrowRight />
+                </Link>
               </div>
             );
           })}
