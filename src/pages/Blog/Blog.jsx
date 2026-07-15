@@ -1,6 +1,7 @@
 import { Box, useComputedColorScheme } from "@mantine/core";
 import BlogHero from "./BlogHero";
 import LatestArticles from "./LatestArticles";
+import PageTitle from "../../components/PageTitle";
 
 
 
@@ -8,6 +9,8 @@ const Blogs = () => {
   const computedColorScheme = useComputedColorScheme("light");
 
   return (
+    <>
+    <PageTitle title="Blogs" />
     <Box
       style={{
         minHeight: "100vh",
@@ -28,6 +31,7 @@ const Blogs = () => {
       <BlogHero />
       <LatestArticles />
     </Box>
+    </>
   );
 };
 

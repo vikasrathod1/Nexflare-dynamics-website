@@ -701,14 +701,14 @@ const Devops = () => {
                   </Badge>
                 </Group>
 
-                <Button
+                {/* <Button
                   size="xl"
                   radius="xl"
                   w="fit-content"
                   rightSection={<IconArrowRight size={20} />}
                 >
                   Discuss Your DevOps Needs
-                </Button>
+                </Button> */}
               </Stack>
             </Box>
           </Grid.Col>

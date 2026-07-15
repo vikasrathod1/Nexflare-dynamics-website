@@ -12,12 +12,15 @@ import IndustriesScreen from "./Industriesscreen";
 import NexflareSuiteScreen from "./NexflareSuiteScreen";
 import Ctascreen from "./Ctascreen";
 import CTAScreen from "./Ctascreen";
+import PageTitle from "../../components/PageTitle";
 
 
 const Products = () => {
   const computedColorScheme = useComputedColorScheme("light");
 
   return (
+    <>
+    <PageTitle title="Products" />
     <Box
       style={{
         minHeight: "100vh",
@@ -50,6 +53,7 @@ const Products = () => {
 
      
     </Box>
+    </>
   );
 };
 

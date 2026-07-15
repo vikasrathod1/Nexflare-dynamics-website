@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useComputedColorScheme } from "@mantine/core";
+import PageTitle from "../../components/PageTitle";
 
 const SECTIONS = [
   {
@@ -624,88 +625,91 @@ export default function TermsConditions() {
   }, []);
 
   return (
-    <div
-      className="tc-root"
-      style={{
-        ...THEME_VARS[theme],
-        paddingTop: "100px",
-      }}
-      data-theme={theme}
-    >
-      <style>{CSS}</style>
+    <>
+      <PageTitle title="Terms & Conditions" />
+      <div
+        className="tc-root"
+        style={{
+          ...THEME_VARS[theme],
+          paddingTop: "100px",
+        }}
+        data-theme={theme}
+      >
+        <style>{CSS}</style>
 
-      <header className="hero">
-        <span className="badge">● LEGAL</span>
-        <h1 className="tc-title">
-          Terms &amp; <span className="accent">Conditions</span>
-        </h1>
-        <p className="hero-desc">
-          These Terms &amp; Conditions govern your use of the Nexflare Dynamics
-          website and your engagement with our services. Please read them
-          carefully before proceeding.
-        </p>
-        <div className="meta-row">
-          <div>
-            <span className="label">Effective Date:</span>{" "}
-            <span className="value">1 January 2025</span>
-          </div>
-          <div>
-            <span className="label">Last Updated:</span>{" "}
-            <span className="value">30 May 2026</span>
-          </div>
-          <div>
-            <span className="label">Jurisdiction:</span>{" "}
-            <span className="value">Pune, Maharashtra, India</span>
-          </div>
-        </div>
-      </header>
-
-      <div className="layout">
-        <aside className="sidebar">
-          <p className="toc-label">Table of Contents</p>
-          <ul className="toc-list">
-            {SECTIONS.map((s, i) => (
-              <li key={s.id}>
-                <button
-                  type="button"
-                  className={`toc-item${activeId === s.id ? " active" : ""}`}
-                  onClick={() => goToSection(s.id)}
-                >
-                  <span className="toc-num">{i + 1}</span>
-                  <span>{s.title}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-          <p className="sidebar-footer">
-            By using our services you agree to these terms.
+        <header className="hero">
+          <span className="badge">● LEGAL</span>
+          <h1 className="tc-title">
+            Terms &amp; <span className="accent">Conditions</span>
+          </h1>
+          <p className="hero-desc">
+            These Terms &amp; Conditions govern your use of the Nexflare
+            Dynamics website and your engagement with our services. Please read
+            them carefully before proceeding.
           </p>
-        </aside>
-
-        <main className="content">
-          <div className="notice">
-            By accessing <b>nexflaredynamics.com</b> or engaging Nexflare
-            Dynamics Pvt. Ltd. for any service, you acknowledge that you have
-            read, understood, and agree to be bound by these Terms &amp;
-            Conditions.
+          <div className="meta-row">
+            <div>
+              <span className="label">Effective Date:</span>{" "}
+              <span className="value">1 January 2025</span>
+            </div>
+            <div>
+              <span className="label">Last Updated:</span>{" "}
+              <span className="value">30 May 2026</span>
+            </div>
+            <div>
+              <span className="label">Jurisdiction:</span>{" "}
+              <span className="value">Pune, Maharashtra, India</span>
+            </div>
           </div>
+        </header>
 
-          {SECTIONS.map((s, i) => (
-            <section
-              key={s.id}
-              id={s.id}
-              ref={(el) => (sectionRefs.current[s.id] = el)}
-              className="policy-section"
-            >
-              <div className="section-head">
-                <span className="section-num">{i + 1}</span>
-                <h2>{s.title}</h2>
-              </div>
-              {s.body}
-            </section>
-          ))}
-        </main>
+        <div className="layout">
+          <aside className="sidebar">
+            <p className="toc-label">Table of Contents</p>
+            <ul className="toc-list">
+              {SECTIONS.map((s, i) => (
+                <li key={s.id}>
+                  <button
+                    type="button"
+                    className={`toc-item${activeId === s.id ? " active" : ""}`}
+                    onClick={() => goToSection(s.id)}
+                  >
+                    <span className="toc-num">{i + 1}</span>
+                    <span>{s.title}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <p className="sidebar-footer">
+              By using our services you agree to these terms.
+            </p>
+          </aside>
+
+          <main className="content">
+            <div className="notice">
+              By accessing <b>nexflaredynamics.com</b> or engaging Nexflare
+              Dynamics Pvt. Ltd. for any service, you acknowledge that you have
+              read, understood, and agree to be bound by these Terms &amp;
+              Conditions.
+            </div>
+
+            {SECTIONS.map((s, i) => (
+              <section
+                key={s.id}
+                id={s.id}
+                ref={(el) => (sectionRefs.current[s.id] = el)}
+                className="policy-section"
+              >
+                <div className="section-head">
+                  <span className="section-num">{i + 1}</span>
+                  <h2>{s.title}</h2>
+                </div>
+                {s.body}
+              </section>
+            ))}
+          </main>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

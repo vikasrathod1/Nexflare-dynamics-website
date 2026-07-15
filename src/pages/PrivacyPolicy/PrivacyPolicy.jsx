@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useComputedColorScheme } from "@mantine/core";
+import PageTitle from "../../components/PageTitle";
 
 const SECTIONS = [
   {
@@ -417,7 +418,7 @@ const THEME_VARS = {
   },
 };
 
-export default function RefundPolicy() {
+export default function PrivacyPolicy() {
   // Reads the theme straight from Mantine's context — the same value your
   // Navbar's toggleTheme() button changes via setColorScheme(). No prop
   // wiring needed: whenever the navbar toggle is clicked, this re-renders
@@ -470,6 +471,8 @@ export default function RefundPolicy() {
   }, []);
 
   return (
+    <>
+    <PageTitle title="Privacy Policy" />
     <div className="rp-root" style={THEME_VARS[theme]} data-theme={theme}>
       <style>{CSS}</style>
 
@@ -533,5 +536,6 @@ export default function RefundPolicy() {
         </main>
       </div>
     </div>
+    </>
   );
 }

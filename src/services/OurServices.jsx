@@ -509,7 +509,7 @@ import { Link } from "react-router-dom";
 const SERVICES = [
   {
     id: "devops",
-    number: "01",
+    // number: "01",
     category: "DevOps",
     icon: IconRefresh,
     title: "Dev Ops",
@@ -518,7 +518,7 @@ const SERVICES = [
   },
   {
     id: "outsourcing",
-    number: "02",
+    // number: "02",
     category: "Outsourcing",
     icon: IconWorld,
     title: "Software Outsourcing",
@@ -527,7 +527,7 @@ const SERVICES = [
   },
   {
     id: "consulting",
-    number: "03",
+    // number: "03",
     category: "Consulting",
     icon: IconUsers,
     title: "Project & Resource Consulting",
@@ -536,7 +536,7 @@ const SERVICES = [
   },
   {
     id: "development",
-    number: "04",
+    // number: "04",
     category: "Development",
     icon: IconCode,
     title: "Custom Software Development",
@@ -798,16 +798,24 @@ export default function OurServices() {
             return (
               <div className="svc-card" key={s.id}>
                 <div className="svc-card-meta">
-                  {s.number} — {s.category}
+                  {s.number} {s.category}
                 </div>
                 <div className="svc-icon">
                   <Icon stroke={1.5} />
                 </div>
                 <h3 className="svc-card-title">{s.title}</h3>
                 <p className="svc-card-desc">{s.description}</p>
-                <a href="#" className="svc-learn-more">
+                {/* <a href="#" className="svc-learn-more">
                   Learn more <IconArrowRight />
-                </a>
+                </a> */}
+                <Link to="/services#devops" className="svc-learn-more">
+                  Learn more <IconArrowRight />
+                </Link>
+
+                {/* <Link to={`/services#${s.id}`} className="svc-learn-more">
+                  Learn more <IconArrowRight />
+                </Link> */}
+                
               </div>
             );
           })}

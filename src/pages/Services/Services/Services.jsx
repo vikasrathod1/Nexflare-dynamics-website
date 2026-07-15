@@ -11,10 +11,36 @@ import ConnectOurTeam from "./ConnectOurTeam";
 import ClientReviews from "./ClientReviews";
 import LetsBuildTogether from "./LetsBuildTogether";
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import PageTitle from "../../../components/PageTitle";
+
 const Services = () => {
   const computedColorScheme = useComputedColorScheme("light");
 
+  const location = useLocation();
+
+  useEffect(() => {
+  if (location.hash) {
+    const id = location.hash.substring(1);
+
+    setTimeout(() => {
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+  }
+}, [location]);
+
   return (
+
+    <>
+    <PageTitle title="Services" />
     <Box
       style={{
         minHeight: "100vh",
@@ -60,6 +86,7 @@ const Services = () => {
       <ClientReviews />
       <LetsBuildTogether />
     </Box>
+    </>
   );
 };
 

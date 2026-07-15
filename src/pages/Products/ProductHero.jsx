@@ -158,6 +158,7 @@ const ProductHero = () => {
                         fontWeight: 600,
                       },
                     }}
+                    onClick={() => navigate("/contact")}
                   >
                     Explore Products
                   </Button>
@@ -329,6 +330,7 @@ const ProductHero = () => {
                         to: "cyan",
                       }}
                       rightSection={<IconArrowRight size={18} />}
+                      onClick={() => navigate("/contact")}
                     >
                       Get Started
                     </Button>

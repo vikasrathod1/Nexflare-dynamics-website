@@ -43,6 +43,7 @@ import IndustriesWeServe from "../../components/Partners/IndustriesWeServe";
 import ClientTestimonials from "../../components/Testimonials/ClientTestimonials";
 import FAQ from "../../components/FAQ/FAQ";
 import OurServices from "../../services/OurServices";
+import PageTitle from "../../components/PageTitle";
 
 const technologies = [
   { name: "React", icon: IconBrandReact, color: "#61DAFB" },
@@ -123,6 +124,7 @@ const Home = () => {
 
   return (
     <>
+    <PageTitle title="Home" />
       <Box
         style={{
           minHeight: "100vh",

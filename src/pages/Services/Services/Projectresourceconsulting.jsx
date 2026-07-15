@@ -459,6 +459,7 @@ import {
   IconGlobe,
   IconCheck,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 const capabilities = [
   {
@@ -505,6 +506,8 @@ const satellites = [
 const ProjectResourceConsulting = () => {
   const scheme = useComputedColorScheme("light");
   const isDark = scheme === "dark";
+
+  const navigate = useNavigate();
 
   // 🎯 THEME TOKENS (NO HARD CODED PALETTE)
   const bg = isDark ? "#0b1220" : "#ffffff";
@@ -612,6 +615,7 @@ const ProjectResourceConsulting = () => {
                     isDark ? "#4f46e5" : "#6366f1"
                   })`,
                 }}
+                onClick={()=>navigate("/contact")}
               >
                 Start a Consultation
               </Button>

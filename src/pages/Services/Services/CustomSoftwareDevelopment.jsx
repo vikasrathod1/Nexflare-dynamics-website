@@ -27,6 +27,7 @@ import {
   IconWorld,
   IconRocket,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 const MotionCard = motion.create(Card);
 
@@ -76,6 +77,8 @@ const services = [
 
 const CustomSoftwareDevelopment = () => {
   const colorScheme = useComputedColorScheme("light");
+
+  const navigate = useNavigate();
 
   return (
     <Container size="xl" py={90}>
@@ -197,6 +200,7 @@ const CustomSoftwareDevelopment = () => {
                     mt="md"
                     color="cyan"
                     rightSection={<IconArrowRight size={18} />}
+                    onClick={()=>navigate("/contact")}
                   >
                     Start Your Project
                   </Button>

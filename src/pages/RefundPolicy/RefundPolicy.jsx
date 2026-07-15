@@ -595,6 +595,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useComputedColorScheme } from "@mantine/core";
+import PageTitle from "../../components/PageTitle";
 
 const SECTIONS = [
   {
@@ -603,15 +604,16 @@ const SECTIONS = [
     body: (
       <>
         <p className="policy-lead">
-          At Nexflare Dynamics Pvt. Ltd., we are committed to delivering high-quality
-          software development, digital marketing, and technology services. Because
-          our work is service-based and involves significant time, expertise, and
-          resources from project kickoff, refunds are handled differently from
-          typical product purchases.
+          At Nexflare Dynamics Pvt. Ltd., we are committed to delivering
+          high-quality software development, digital marketing, and technology
+          services. Because our work is service-based and involves significant
+          time, expertise, and resources from project kickoff, refunds are
+          handled differently from typical product purchases.
         </p>
         <p className="policy-lead">
-          This policy sets out when a refund may be issued, how much of a payment is
-          refundable at each stage of a project, and how to raise a refund request.
+          This policy sets out when a refund may be issued, how much of a
+          payment is refundable at each stage of a project, and how to raise a
+          refund request.
         </p>
       </>
     ),
@@ -622,15 +624,26 @@ const SECTIONS = [
     body: (
       <>
         <p className="policy-lead">
-          Our services are delivered on a project or retainer basis and typically
-          involve custom work tailored to each client's requirements. Because of
-          this:
+          Our services are delivered on a project or retainer basis and
+          typically involve custom work tailored to each client's requirements.
+          Because of this:
         </p>
         <ul className="policy-list">
-          <li>Work often begins as soon as an advance or deposit is received</li>
-          <li>Time, planning, and resources are allocated to your project from day one</li>
-          <li>Deliverables are frequently custom-built and cannot be resold or reused for another client</li>
-          <li>Third-party costs (licenses, ad spend, hosting, tools) may be incurred on your behalf and are non-refundable once spent</li>
+          <li>
+            Work often begins as soon as an advance or deposit is received
+          </li>
+          <li>
+            Time, planning, and resources are allocated to your project from day
+            one
+          </li>
+          <li>
+            Deliverables are frequently custom-built and cannot be resold or
+            reused for another client
+          </li>
+          <li>
+            Third-party costs (licenses, ad spend, hosting, tools) may be
+            incurred on your behalf and are non-refundable once spent
+          </li>
         </ul>
       </>
     ),
@@ -641,13 +654,24 @@ const SECTIONS = [
     body: (
       <>
         <p className="policy-lead">
-          Most engagements require an advance or deposit payment before work begins.
-          This covers initial planning, resource allocation, and project setup.
+          Most engagements require an advance or deposit payment before work
+          begins. This covers initial planning, resource allocation, and project
+          setup.
         </p>
         <ul className="policy-list">
-          <li><span className="hl-green">Full refund</span> — if you cancel before any work has started and before the advance has been utilised</li>
-          <li><span className="hl-orange">Partial refund</span> — if you cancel after work has started; the amount corresponding to work already completed and resources committed will be deducted</li>
-          <li>No refund of the advance is issued once discovery, design, or development work is underway, except as required by law</li>
+          <li>
+            <span className="hl-green">Full refund</span> — if you cancel before
+            any work has started and before the advance has been utilised
+          </li>
+          <li>
+            <span className="hl-orange">Partial refund</span> — if you cancel
+            after work has started; the amount corresponding to work already
+            completed and resources committed will be deducted
+          </li>
+          <li>
+            No refund of the advance is issued once discovery, design, or
+            development work is underway, except as required by law
+          </li>
         </ul>
       </>
     ),
@@ -658,13 +682,22 @@ const SECTIONS = [
     body: (
       <>
         <p className="policy-lead">
-          For projects billed in milestones, each payment corresponds to a defined
-          phase of work (e.g. design, development, testing, deployment).
+          For projects billed in milestones, each payment corresponds to a
+          defined phase of work (e.g. design, development, testing, deployment).
         </p>
         <ul className="policy-list">
-          <li>Payments for milestones that have been completed and delivered are non-refundable</li>
-          <li>If a milestone is cancelled before work on it begins, that milestone's payment is refundable in full</li>
-          <li>If a milestone is cancelled while in progress, you will be refunded for the unworked portion, calculated on a pro-rata basis</li>
+          <li>
+            Payments for milestones that have been completed and delivered are
+            non-refundable
+          </li>
+          <li>
+            If a milestone is cancelled before work on it begins, that
+            milestone's payment is refundable in full
+          </li>
+          <li>
+            If a milestone is cancelled while in progress, you will be refunded
+            for the unworked portion, calculated on a pro-rata basis
+          </li>
         </ul>
       </>
     ),
@@ -674,18 +707,34 @@ const SECTIONS = [
     title: "Refund Eligibility",
     body: (
       <>
-        <p className="policy-lead">You may be eligible for a refund in the following circumstances:</p>
+        <p className="policy-lead">
+          You may be eligible for a refund in the following circumstances:
+        </p>
         <ul className="policy-list">
-          <li>We fail to deliver the agreed scope of work within a reasonable time and do not remedy this after being notified</li>
-          <li>Services delivered materially differ from what was agreed in the project proposal or contract</li>
+          <li>
+            We fail to deliver the agreed scope of work within a reasonable time
+            and do not remedy this after being notified
+          </li>
+          <li>
+            Services delivered materially differ from what was agreed in the
+            project proposal or contract
+          </li>
           <li>A duplicate or erroneous payment was made</li>
           <li>We are unable to begin the project after accepting payment</li>
         </ul>
-        <p className="policy-subhead orange">Refunds are generally not issued for:</p>
+        <p className="policy-subhead orange">
+          Refunds are generally not issued for:
+        </p>
         <ul className="policy-list">
           <li>Change of mind after work has commenced</li>
-          <li>Delays caused by the client's failure to provide timely feedback, content, or approvals</li>
-          <li>Dissatisfaction with subjective creative choices that were approved during the project</li>
+          <li>
+            Delays caused by the client's failure to provide timely feedback,
+            content, or approvals
+          </li>
+          <li>
+            Dissatisfaction with subjective creative choices that were approved
+            during the project
+          </li>
         </ul>
       </>
     ),
@@ -695,11 +744,22 @@ const SECTIONS = [
     title: "Non-Refundable Items",
     body: (
       <>
-        <p className="policy-lead">The following are non-refundable under all circumstances:</p>
+        <p className="policy-lead">
+          The following are non-refundable under all circumstances:
+        </p>
         <ul className="policy-list">
-          <li>Third-party costs already incurred on your behalf (domains, hosting, licenses, ad spend, plugins, stock assets)</li>
-          <li>Consulting, strategy, or discovery sessions that have already taken place</li>
-          <li>Custom deliverables that have been completed, delivered, and approved by you</li>
+          <li>
+            Third-party costs already incurred on your behalf (domains, hosting,
+            licenses, ad spend, plugins, stock assets)
+          </li>
+          <li>
+            Consulting, strategy, or discovery sessions that have already taken
+            place
+          </li>
+          <li>
+            Custom deliverables that have been completed, delivered, and
+            approved by you
+          </li>
           <li>Payment gateway or bank transaction fees</li>
         </ul>
       </>
@@ -710,12 +770,31 @@ const SECTIONS = [
     title: "Refund Process & Timeline",
     body: (
       <>
-        <p className="policy-lead">To request a refund, please contact us with your project or invoice details.</p>
+        <p className="policy-lead">
+          To request a refund, please contact us with your project or invoice
+          details.
+        </p>
         <ul className="policy-list">
-          <li>Submit your request in writing to <a className="inline-link" href="mailto:enquiry@nexflaredynamics.com">enquiry@nexflaredynamics.com</a></li>
-          <li>We will review your request and respond within 7 business days</li>
-          <li>If approved, refunds are processed to the original payment method within 14 business days</li>
-          <li>Bank or gateway processing times may add a few additional days before funds reflect in your account</li>
+          <li>
+            Submit your request in writing to{" "}
+            <a
+              className="inline-link"
+              href="mailto:enquiry@nexflaredynamics.com"
+            >
+              enquiry@nexflaredynamics.com
+            </a>
+          </li>
+          <li>
+            We will review your request and respond within 7 business days
+          </li>
+          <li>
+            If approved, refunds are processed to the original payment method
+            within 14 business days
+          </li>
+          <li>
+            Bank or gateway processing times may add a few additional days
+            before funds reflect in your account
+          </li>
         </ul>
       </>
     ),
@@ -727,13 +806,24 @@ const SECTIONS = [
       <>
         <p className="policy-subhead blue">Cancellation by you:</p>
         <ul className="policy-list">
-          <li>You may cancel a project at any time by notifying us in writing</li>
-          <li>Refunds, if any, will be calculated per the Milestone Payments and Refund Eligibility sections above</li>
+          <li>
+            You may cancel a project at any time by notifying us in writing
+          </li>
+          <li>
+            Refunds, if any, will be calculated per the Milestone Payments and
+            Refund Eligibility sections above
+          </li>
         </ul>
         <p className="policy-subhead orange">Cancellation by us:</p>
         <ul className="policy-list">
-          <li>If we are unable to continue a project for reasons within our control, you will receive a full refund for undelivered work</li>
-          <li>If cancellation is due to circumstances beyond our control (force majeure), refunds will be assessed on a case-by-case basis</li>
+          <li>
+            If we are unable to continue a project for reasons within our
+            control, you will receive a full refund for undelivered work
+          </li>
+          <li>
+            If cancellation is due to circumstances beyond our control (force
+            majeure), refunds will be assessed on a case-by-case basis
+          </li>
         </ul>
       </>
     ),
@@ -743,11 +833,11 @@ const SECTIONS = [
     title: "Dispute Resolution",
     body: (
       <p className="policy-lead">
-        If you disagree with a refund decision, please raise this with us in writing
-        so we can review the matter further. We aim to resolve disputes amicably
-        through direct discussion. If a resolution cannot be reached, either party
-        may pursue remedies available under applicable law, subject to the
-        jurisdiction stated in this policy.
+        If you disagree with a refund decision, please raise this with us in
+        writing so we can review the matter further. We aim to resolve disputes
+        amicably through direct discussion. If a resolution cannot be reached,
+        either party may pursue remedies available under applicable law, subject
+        to the jurisdiction stated in this policy.
       </p>
     ),
   },
@@ -756,11 +846,11 @@ const SECTIONS = [
     title: "Changes to This Policy",
     body: (
       <p className="policy-lead">
-        We may update this Refund Policy from time to time to reflect changes in our
-        practices or legal requirements. When we make material changes, we will
-        update the "Last Updated" date at the top of this page. Continued use of our
-        services following any changes constitutes your acceptance of the updated
-        policy.
+        We may update this Refund Policy from time to time to reflect changes in
+        our practices or legal requirements. When we make material changes, we
+        will update the "Last Updated" date at the top of this page. Continued
+        use of our services following any changes constitutes your acceptance of
+        the updated policy.
       </p>
     ),
   },
@@ -770,13 +860,25 @@ const SECTIONS = [
     body: (
       <>
         <p className="policy-lead">
-          If you have any questions about this Refund Policy or wish to request a
-          refund, please contact us:
+          If you have any questions about this Refund Policy or wish to request
+          a refund, please contact us:
         </p>
         <div className="contact-card">
           <p className="company">Nexflare Dynamics Pvt. Ltd.</p>
-          <p className="addr"><b>Global Business Hub</b>, EON Free Zone,<br />Kharadi, Pune, Maharashtra 411014, India</p>
-          <p>✉️ <a className="inline-link" href="mailto:enquiry@nexflaredynamics.com">enquiry@nexflaredynamics.com</a></p>
+          <p className="addr">
+            <b>Global Business Hub</b>, EON Free Zone,
+            <br />
+            Kharadi, Pune, Maharashtra 411014, India
+          </p>
+          <p>
+            ✉️{" "}
+            <a
+              className="inline-link"
+              href="mailto:enquiry@nexflaredynamics.com"
+            >
+              enquiry@nexflaredynamics.com
+            </a>
+          </p>
           <p>📞 +91-8237525097</p>
         </div>
       </>
@@ -1032,9 +1134,11 @@ export default function RefundPolicy() {
           if (entry.isIntersecting) setActiveId(entry.target.id);
         });
       },
-      { rootMargin: "-15% 0px -70% 0px", threshold: 0 }
+      { rootMargin: "-15% 0px -70% 0px", threshold: 0 },
     );
-    Object.values(sectionRefs.current).forEach((el) => el && observer.observe(el));
+    Object.values(sectionRefs.current).forEach(
+      (el) => el && observer.observe(el),
+    );
     return () => observer.disconnect();
   }, []);
 
@@ -1065,68 +1169,81 @@ export default function RefundPolicy() {
   }, []);
 
   return (
-    <div className="rp-root" style={THEME_VARS[theme]} data-theme={theme}>
-      <style>{CSS}</style>
+    <>
+      <PageTitle title="Refund Policy" />
+      <div className="rp-root" style={THEME_VARS[theme]} data-theme={theme}>
+        <style>{CSS}</style>
 
-      <header className="hero">
-        <span className="badge">◆ LEGAL</span>
-        <h1 className="rp-title">
-          Refund <span className="accent">Policy</span>
-        </h1>
-        <p className="hero-desc">
-          We strive to deliver exceptional results on every engagement. This policy
-          explains the conditions under which refunds may be issued for our
-          services.
-        </p>
-        <div className="meta-row">
-          <div><span className="label">Effective Date:</span> <span className="value">1 January 2025</span></div>
-          <div><span className="label">Last Updated:</span> <span className="value">30 May 2026</span></div>
-          <div><span className="label">Jurisdiction:</span> <span className="value">Pune, Maharashtra, India</span></div>
-        </div>
-      </header>
-
-      <div className="layout">
-        <aside className="sidebar">
-          <p className="toc-label">Table of Contents</p>
-          <ul className="toc-list">
-            {SECTIONS.map((s, i) => (
-              <li key={s.id}>
-                <button
-                  type="button"
-                  className={`toc-item${activeId === s.id ? " active" : ""}`}
-                  onClick={() => goToSection(s.id)}
-                >
-                  <span className="toc-num">{i + 1}</span>
-                  <span>{s.title}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </aside>
-
-        <main className="content">
-          <div className="notice">
-            By engaging <b>Nexflare Dynamics Pvt. Ltd.</b> and making any payment, you
-            acknowledge that you have read and agree to this Refund Policy. We
-            recommend reviewing this policy before initiating any project.
+        <header className="hero">
+          <span className="badge">◆ LEGAL</span>
+          <h1 className="rp-title">
+            Refund <span className="accent">Policy</span>
+          </h1>
+          <p className="hero-desc">
+            We strive to deliver exceptional results on every engagement. This
+            policy explains the conditions under which refunds may be issued for
+            our services.
+          </p>
+          <div className="meta-row">
+            <div>
+              <span className="label">Effective Date:</span>{" "}
+              <span className="value">1 January 2025</span>
+            </div>
+            <div>
+              <span className="label">Last Updated:</span>{" "}
+              <span className="value">30 May 2026</span>
+            </div>
+            <div>
+              <span className="label">Jurisdiction:</span>{" "}
+              <span className="value">Pune, Maharashtra, India</span>
+            </div>
           </div>
+        </header>
 
-          {SECTIONS.map((s, i) => (
-            <section
-              key={s.id}
-              id={s.id}
-              ref={(el) => (sectionRefs.current[s.id] = el)}
-              className="policy-section"
-            >
-              <div className="section-head">
-                <span className="section-num">{i + 1}</span>
-                <h2>{s.title}</h2>
-              </div>
-              {s.body}
-            </section>
-          ))}
-        </main>
+        <div className="layout">
+          <aside className="sidebar">
+            <p className="toc-label">Table of Contents</p>
+            <ul className="toc-list">
+              {SECTIONS.map((s, i) => (
+                <li key={s.id}>
+                  <button
+                    type="button"
+                    className={`toc-item${activeId === s.id ? " active" : ""}`}
+                    onClick={() => goToSection(s.id)}
+                  >
+                    <span className="toc-num">{i + 1}</span>
+                    <span>{s.title}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+
+          <main className="content">
+            <div className="notice">
+              By engaging <b>Nexflare Dynamics Pvt. Ltd.</b> and making any
+              payment, you acknowledge that you have read and agree to this
+              Refund Policy. We recommend reviewing this policy before
+              initiating any project.
+            </div>
+
+            {SECTIONS.map((s, i) => (
+              <section
+                key={s.id}
+                id={s.id}
+                ref={(el) => (sectionRefs.current[s.id] = el)}
+                className="policy-section"
+              >
+                <div className="section-head">
+                  <span className="section-num">{i + 1}</span>
+                  <h2>{s.title}</h2>
+                </div>
+                {s.body}
+              </section>
+            ))}
+          </main>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
